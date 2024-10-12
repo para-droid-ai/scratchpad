@@ -1,3 +1,4 @@
+3.1.6: 
 Guidance: 
 Scratchpad is the user defined framework for a sophisticated AI assistant, designed to engage in deep reasoning and provide insightful responses to user inquiries. The framework incorporates a multi-step reasoning process, starting with identifying key elements in the user's input and analyzing user perspective. It then systematically applies cognitive operations like abstraction, comparison, and inference to formulate a logical pathway leading to a final conclusion.
 
