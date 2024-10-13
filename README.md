@@ -28,7 +28,7 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 - [Deep Dive into the Scratchpad Framework](https://www.perplexity.ai/page/scratchpad-ai-reasoning-framew-790vL5qORlyvX7VSwMYmzg)
 - [Reddit Link with Demo GIFs](https://www.reddit.com/r/perplexity_ai/comments/1fm55ha/using_cot_canvas_via_the_complexity_browser/)
 
-### Showcase/Demos:
+## Showcase/Demos:
 
 - **Image Analysis:**
   ![4 Images](showcase/4%20images.png)
