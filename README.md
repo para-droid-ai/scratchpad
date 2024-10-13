@@ -22,16 +22,22 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 - **Advanced Logic**: Utilizes advanced reasoning to connect the dots and provide insightful responses.
 - **Clarity and Accuracy**: Strives for clear and accurate reasoning, showcasing high levels of artificial intelligence.
 
-## Showcase
+# Showcase
 
 - [Scratchpad Canvas Best Practices](https://www.perplexity.ai/page/chain-of-thought-reasoning-via-22CYSxmhTMSFr1gJIXM4dg)
 - [Deep Dive into the Scratchpad Framework](https://www.perplexity.ai/page/scratchpad-ai-reasoning-framew-790vL5qORlyvX7VSwMYmzg)
 - [Reddit Link with Demo GIFs](https://www.reddit.com/r/perplexity_ai/comments/1fm55ha/using_cot_canvas_via_the_complexity_browser/)
 
-- Showcase/Demos:
-  - ![4 Images](showcase/4%20images.png)
-  - ![Scratchpad from main_new](showcase/scratchpad%20from%20main_new.gif)
-  - ![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
+### Showcase/Demos:
+
+#### Breaking down 4 sky images:
+![4 Images](showcase/4%20images.png)
+
+#### Using CPLX and Scratchpad Canvas:
+![Scratchpad from main_new](showcase/scratchpad%20from%20main_new.gif)
+
+#### How to create the "scratchpad" PPLX Collection:
+![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
  
 ## Installation
 
