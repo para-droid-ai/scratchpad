@@ -77,20 +77,20 @@ By integrating Scratchpad into your AI Profile/PPLX Collection, the framework se
 
 We welcome contributions to enhance Scratchpad. To contribute:
 
-1. Fork the repository.
-2. Create a new branch:
+1. **Fork the repository.**
+2. **Create a new branch:**
     ```bash
     git checkout -b feature-branch
     ```
-3. Make your changes and commit them:
+3. **Make your changes and commit them:**
     ```bash
     git commit -m "Description of changes"
     ```
-4. Push to the branch:
+4. **Push to the branch:**
     ```bash
     git push origin feature-branch
     ```
-5. Open a pull request.
+5. **Open a pull request.**
 
 For questions or further guidance, feel free to contact the maintainers.
 
