@@ -50,6 +50,10 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
   ![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
   *Caption: Step-by-step guide to creating a Scratchpad collection for PPLX.*
 
+- **Model Adaptation:**
+  ![Showcasing the model adapting to the framework](showcase/TLDR%20Task%20with%20Canvas.png)
+  *Caption: Demonstration of the model's adaptation to the Scratchpad framework.*
+
 ## Installation
 
 - For AI Profile, copy/paste the prompt from: [AI Profile Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_AI-Profile.md)
