@@ -1,4 +1,4 @@
-# Scratchpad-Think
+# Scratchpad
 
 Scratchpad is a user-defined framework designed for a sophisticated AI assistant capable of deep reasoning and providing insightful responses to user inquiries. This README provides an overview, installation instructions, usage guidelines, and contribution information.
 
@@ -11,24 +11,32 @@ Scratchpad is a user-defined framework designed for a sophisticated AI assistant
 - [Contributing](#contributing)
 - [License](#license)
 
-
 ## Overview
 
-Scratchpad aims to facilitate advanced reasoning by systematically processing user inputs through various cognitive operations. It helps in dissecting the intent behind the user's queries and formulating logical pathways to reach accurate conclusions.
+Scratchpad aims to facilitate advanced reasoning by systematically processing user inputs through various cognitive operations. It dissects the intent behind user queries and formulates logical pathways to reach accurate conclusions.
 
 ## Features
 
+- **Focus on User Intent and Context**: Breaks down user intent and context to provide more relevant and accurate responses.
+- **Dynamic Contextual Adaptation**: Adapts to changes in user context dynamically, ensuring ongoing relevance in responses.
+- **Transparent Reasoning "Blackbox"**: Establishes a "blackbox" for the model's reasoning, enabling users to verify the model's logic and confirm its understanding of user context.
 - **Multi-Step Reasoning**: Identifies key elements, analyzes user perspectives, and applies cognitive operations like abstraction, comparison, and inference.
 - **Advanced Logic**: Utilizes advanced reasoning to connect the dots and provide insightful responses.
-- **Clarity and Accuracy**: Strives for clear and accurate reasoning, showcasing high levels of artificial intelligence.
+- **Error Detection and Correction**: Detects and corrects potential errors in reasoning, enhancing response reliability.
+- **User Feedback Integration**: Integrates user feedback into the reasoning process, improving performance over time.
+- **Interactive Learning**: Refines reasoning capabilities through continuous user interaction.
+- **Scalable Reasoning Processes**: Maintains performance and accuracy across complex queries and diverse topics.
+- **Clarity and Accuracy**: Strives for clear and accurate reasoning, demonstrating advanced artificial intelligence capabilities.
 
-## Showcase: Links
+## Showcase
+
+### Links
 
 - [Scratchpad Canvas Best Practices](https://www.perplexity.ai/page/chain-of-thought-reasoning-via-22CYSxmhTMSFr1gJIXM4dg)
 - [Deep Dive into the Scratchpad Framework](https://www.perplexity.ai/page/scratchpad-ai-reasoning-framew-790vL5qORlyvX7VSwMYmzg)
 - [Reddit Link with Demo GIFs](https://www.reddit.com/r/perplexity_ai/comments/1fm55ha/using_cot_canvas_via_the_complexity_browser/)
 
-## Showcase: Demos
+### Demos
 
 - **Image Analysis:**
   ![4 Images](showcase/4%20images.png)
@@ -44,8 +52,8 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ## Installation
 
-- For AI Profile, copy/paste the prompt from: https://github.com/para-droid-ai/scratchpad/blob/main/prompt_AI-Profile
-- For PPLX Colections, copy/paste the prompt from: https://github.com/para-droid-ai/scratchpad/blob/main/prompt_collection
+- For AI Profile, copy/paste the prompt from: [AI Profile Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_AI-Profile.md)
+- For PPLX Collections, copy/paste the prompt from: [PPLX Collection Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_collection.md)
 
 ## Usage
 
@@ -83,6 +91,8 @@ We welcome contributions to enhance Scratchpad. To contribute:
     git push origin feature-branch
     ```
 5. Open a pull request.
+
+For questions or further guidance, feel free to contact the maintainers.
 
 ## License
 
