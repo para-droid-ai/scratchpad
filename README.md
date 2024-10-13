@@ -22,20 +22,7 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ## Installation
 
-To install Scratchpad, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/para-droid-ai/scratchpad.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd scratchpad
-    ```
-3. Install the required dependencies:
-    ```bash
-    npm install
-    ```
+Copy/Paste prompt from https://github.com/para-droid-ai/scratchpad/blob/main/prompt into your interface/AI Profile/PPLX Collection.
 
 ## Usage
 
