@@ -30,15 +30,15 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ### Showcase/Demos:
 
-- **Breaking down 4 sky images:**
+- **Image Analysis:**
   ![4 Images](showcase/4%20images.png)
   *Caption: A breakdown of four sky images showcasing the analysis capabilities.*
 
-- **Using CPLX and Scratchpad Canvas:**
+- **Scratchpad in Action:**
   ![Scratchpad from main_new](showcase/scratchpad%20from%20main_new.gif)
-  *Caption: Demonstration of using CPLX with Scratchpad Canvas.*
+  *Caption: Demonstration of using CPLX with Scratchpad Canvas from, from the PPLX homepage.*
 
-- **How to create the "scratchpad" PPLX Collection:**
+- **Creating the Scratchpad Collection in PPLX:**
   ![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
   *Caption: Step-by-step guide to creating a Scratchpad collection for PPLX.*
 
