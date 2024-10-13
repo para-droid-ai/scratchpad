@@ -92,7 +92,7 @@ We welcome contributions to enhance Scratchpad. To contribute:
 
 ## License
 
-Scratchpad is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Scratchpad is licensed under the MIT License. See the [LICENSE](https://github.com/para-droid-ai/scratchpad/blob/main/LICENSE) file for more details.
 
 ---
 
