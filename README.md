@@ -22,7 +22,7 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 - **Advanced Logic**: Utilizes advanced reasoning to connect the dots and provide insightful responses.
 - **Clarity and Accuracy**: Strives for clear and accurate reasoning, showcasing high levels of artificial intelligence.
 
-# Showcase
+## Showcase
 
 - [Scratchpad Canvas Best Practices](https://www.perplexity.ai/page/chain-of-thought-reasoning-via-22CYSxmhTMSFr1gJIXM4dg)
 - [Deep Dive into the Scratchpad Framework](https://www.perplexity.ai/page/scratchpad-ai-reasoning-framew-790vL5qORlyvX7VSwMYmzg)
@@ -30,15 +30,18 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ### Showcase/Demos:
 
-#### Breaking down 4 sky images:
-![4 Images](showcase/4%20images.png)
+- **Breaking down 4 sky images:**
+  ![4 Images](showcase/4%20images.png)
+  *Caption: A breakdown of four sky images showcasing the analysis capabilities.*
 
-#### Using CPLX and Scratchpad Canvas:
-![Scratchpad from main_new](showcase/scratchpad%20from%20main_new.gif)
+- **Using CPLX and Scratchpad Canvas:**
+  ![Scratchpad from main_new](showcase/scratchpad%20from%20main_new.gif)
+  *Caption: Demonstration of using CPLX with Scratchpad Canvas.*
 
-#### How to create the "scratchpad" PPLX Collection:
-![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
- 
+- **How to create the "scratchpad" PPLX Collection:**
+  ![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
+  *Caption: Step-by-step guide to creating a Scratchpad collection for PPLX.*
+
 ## Installation
 
 Copy/Paste prompt from https://github.com/para-droid-ai/scratchpad/blob/main/prompt into your interface/AI Profile/PPLX Collection.
