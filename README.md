@@ -5,10 +5,12 @@ Scratchpad is a user-defined framework designed for a sophisticated AI assistant
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Showcase] (#showcase)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+
 
 ## Overview
 
@@ -19,6 +21,12 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 - **Multi-Step Reasoning**: Identifies key elements, analyzes user perspectives, and applies cognitive operations like abstraction, comparison, and inference.
 - **Advanced Logic**: Utilizes advanced reasoning to connect the dots and provide insightful responses.
 - **Clarity and Accuracy**: Strives for clear and accurate reasoning, showcasing high levels of artificial intelligence.
+
+## Showcase
+
+- https://www.perplexity.ai/page/chain-of-thought-reasoning-via-22CYSxmhTMSFr1gJIXM4dg
+- https://www.perplexity.ai/page/scratchpad-ai-reasoning-framew-790vL5qORlyvX7VSwMYmzg
+- https://www.reddit.com/r/perplexity_ai/comments/1fm55ha/using_cot_canvas_via_the_complexity_browser/
 
 ## Installation
 
