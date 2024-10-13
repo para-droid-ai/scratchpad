@@ -5,7 +5,7 @@ Scratchpad is a user-defined framework designed for a sophisticated AI assistant
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Showcase] (#showcase)
+- [Showcase](#showcase)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
