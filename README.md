@@ -28,9 +28,11 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 - [Deep Dive into the Scratchpad Framework](https://www.perplexity.ai/page/scratchpad-ai-reasoning-framew-790vL5qORlyvX7VSwMYmzg)
 - [Reddit Link with Demo GIFs](https://www.reddit.com/r/perplexity_ai/comments/1fm55ha/using_cot_canvas_via_the_complexity_browser/)
 
-![Demo GIF](https://i.redd.it/5v5hp5f2k6qd1.gif)
-
-
+- Showcase/Demos:
+  - ![4 Images](showcase/4%20images.png)
+  - ![Scratchpad from main_new](showcase/scratchpad%20from%20main_new.gif)
+  - ![Create Scratchpad collection for PPLX](showcase/create%20scratchpad%20collection.gif)
+ 
 ## Installation
 
 Copy/Paste prompt from https://github.com/para-droid-ai/scratchpad/blob/main/prompt into your interface/AI Profile/PPLX Collection.
