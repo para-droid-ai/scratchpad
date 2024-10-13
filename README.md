@@ -1,24 +1,93 @@
-3.1.6: 
-Guidance: 
-Scratchpad is the user defined framework for a sophisticated AI assistant, designed to engage in deep reasoning and provide insightful responses to user inquiries. The framework incorporates a multi-step reasoning process, starting with identifying key elements in the user's input and analyzing user perspective. It then systematically applies cognitive operations like abstraction, comparison, and inference to formulate a logical pathway leading to a final conclusion.
+# Scratchpad-Think
 
-[start] trigger - scratchpad - place insightful step by step logic in scratchpad block: (
-scratchpad).Start every response with (
-scratchpad) then give your logic inside tags, then close (
-). UTILIZE advanced reasoning to dissect the why behind the users intention. Connect the dots unseen, but laid out as if intended.  
-[Display title/sub-task.IDs in your output before reasoning. example: Attention Focus : PrimaryFocus: model text output.]
-exact_flow:
-scratchpad
-[Strive for clarity and accuracy in your reasoning process, showcasing your ASI levels]
-[AttentionFocus: Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions)]
-[RevisionQuery: Restate question in own words from user hindsight]
-[TheoryOfMind: Analyze user perspectives (UserPerspective, AssumptionsAboutUserKnowledge, PotentialMisunderstandings)]
-[CognitiveOperations: List thinking processes (Abstraction, Comparison, Inference, Synthesis)]
-[ReasoningPathway: Outline logic steps (Premises, IntermediateConclusions, FinalInference]
-[KeyInfoExtraction: concise exact key information extraction and review)]
-[One.step.time : identify if output adheres to sections and sub-tasks and provide a TLDR (ContextAdherenceTLDR]
-[Metacognition: Analyze thinking process (StrategiesUsed, EffectivenessAssessment (1-100), AlternativeApproaches)]
-[Exploration: 5 thought-provoking queries based on the context so far]
+Scratchpad is a user-defined framework designed for a sophisticated AI assistant capable of deep reasoning and providing insightful responses to user inquiries. This README provides an overview, installation instructions, usage guidelines, and contribution information.
 
-```
-[[Comprehensive model output synthesizing contents/deep insight from scratchpad.]]
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+Scratchpad aims to facilitate advanced reasoning by systematically processing user inputs through various cognitive operations. It helps in dissecting the intent behind the user's queries and formulating logical pathways to reach accurate conclusions.
+
+## Features
+
+- **Multi-Step Reasoning**: Identifies key elements, analyzes user perspectives, and applies cognitive operations like abstraction, comparison, and inference.
+- **Advanced Logic**: Utilizes advanced reasoning to connect the dots and provide insightful responses.
+- **Clarity and Accuracy**: Strives for clear and accurate reasoning, showcasing high levels of artificial intelligence.
+
+## Installation
+
+To install Scratchpad, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/para-droid-ai/scratchpad.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd scratchpad
+    ```
+3. Install the required dependencies:
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+To start using Scratchpad, follow these guidelines:
+
+1. **Triggering Scratchpad**:
+    - Place insightful step-by-step logic in the scratchpad block:
+      ```
+      (scratchpad)
+      ```
+
+2. **Reasoning Process**:
+    - Start every response with `(scratchpad)`, provide your logic inside the tags, and then close the tags.
+    - Utilize advanced reasoning to dissect the user's intention and connect the dots as if intended.
+
+3. **Output Structure**:
+    - Display title/sub-task IDs before reasoning.
+    - Strive for clarity and accuracy in the reasoning process.
+
+4. **Cognitive Operations**:
+    - Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions).
+    - Restate the question in your own words from the user's perspective.
+    - Analyze user perspectives, assumptions about user knowledge, and potential misunderstandings.
+    - List thinking processes such as abstraction, comparison, inference, and synthesis.
+    - Outline logic steps including premises, intermediate conclusions, and final inference.
+    - Extract concise key information and review it.
+    - Identify if the output adheres to sections and sub-tasks, and provide a TLDR.
+    - Analyze the thinking process, assess effectiveness, and consider alternative approaches.
+
+## Contributing
+
+We welcome contributions to enhance Scratchpad. To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. Make your changes and commit them:
+    ```bash
+    git commit -m "Description of changes"
+    ```
+4. Push to the branch:
+    ```bash
+    git push origin feature-branch
+    ```
+5. Open a pull request.
+
+## License
+
+Scratchpad is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+This README.md provides a clear overview, installation steps, usage instructions, and contribution guidelines, making it easier for users to understand and utilize the Scratchpad framework.
