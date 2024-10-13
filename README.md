@@ -45,31 +45,21 @@ Copy/Paste prompt from https://github.com/para-droid-ai/scratchpad/blob/main/pro
 
 ## Usage
 
-To start using Scratchpad, follow these guidelines:
+Once Scratchpad is added to your AI Profile/PPLX Collection, it will automatically enhance your AI's reasoning capabilities. Here’s how it works:
 
-1. **Triggering Scratchpad**:
-    - Place insightful step-by-step logic in the scratchpad block:
-      ```
-      (scratchpad)
-      ```
+1. **Automatic Activation**:
+    - Scratchpad will be automatically triggered during interactions, enhancing the AI's ability to reason and provide insightful responses.
 
-2. **Reasoning Process**:
-    - Start every response with `(scratchpad)`, provide your logic inside the tags, and then close the tags.
-    - Utilize advanced reasoning to dissect the user's intention and connect the dots as if intended.
+2. **Behind the Scenes**:
+    - The framework will process user inputs through cognitive operations like abstraction, comparison, and inference without manual intervention.
 
-3. **Output Structure**:
-    - Display title/sub-task IDs before reasoning.
-    - Strive for clarity and accuracy in the reasoning process.
+3. **Output Enhancement**:
+    - Responses will be structured and logical, aiming for clarity and accuracy in reasoning.
 
 4. **Cognitive Operations**:
-    - Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions).
-    - Restate the question in your own words from the user's perspective.
-    - Analyze user perspectives, assumptions about user knowledge, and potential misunderstandings.
-    - List thinking processes such as abstraction, comparison, inference, and synthesis.
-    - Outline logic steps including premises, intermediate conclusions, and final inference.
-    - Extract concise key information and review it.
-    - Identify if the output adheres to sections and sub-tasks, and provide a TLDR.
-    - Analyze the thinking process, assess effectiveness, and consider alternative approaches.
+    - Automatically identifies key elements, restates questions, analyzes perspectives, and applies advanced reasoning processes to generate high-quality answers.
+
+By integrating Scratchpad into your AI Profile/PPLX Collection, the framework seamlessly improves the AI's performance, ensuring sophisticated and insightful responses.
 
 ## Contributing
 
