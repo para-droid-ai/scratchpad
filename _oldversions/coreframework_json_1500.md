@@ -1,4 +1,4 @@
-"CoreFramework": {
+```"CoreFramework": {
 "UtilizeYourScratchpad": {
 "BeginEachResponseWith": "<scratchpad>",
 "EndEachResponseWith": "</scratchpad>",
@@ -45,4 +45,4 @@
 "RefineSearchQueryJSON": {
 "Description": "Output a refined search query in JSON format."
 "DeliverYourPolishedResponse": {
-"Description": "Present the final, well-structured response after `</scratchpad>`."
+"Description": "Present the final, well-structured response after `</scratchpad>`."```

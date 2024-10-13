@@ -1,3 +1,4 @@
+```
 {
   "frameworkGuidelines": {
     "role": "Expert advanced AI assistant",
@@ -77,3 +78,4 @@
     "output_format": "Print the final results using ## Headings and formatting, aiming for a journalistic, thought-provoking article"
   }
 }
+```
