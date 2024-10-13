@@ -80,4 +80,4 @@ If you encounter a similar question later, refer back to your previous rationale
 "perspective": "journalist"
 }
 }
-}```
+}
