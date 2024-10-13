@@ -44,7 +44,8 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ## Installation
 
-Copy/Paste prompt from https://github.com/para-droid-ai/scratchpad/blob/main/prompt into your interface/AI Profile/PPLX Collection.
+- For AI Profile, copy/paste the prompt from: https://github.com/para-droid-ai/scratchpad/blob/main/prompt_AI-Profile
+- For PPLX Colections, copy/paste the prompt from: https://github.com/para-droid-ai/scratchpad/blob/main/prompt_collection
 
 ## Usage
 
