@@ -57,5 +57,5 @@ tags, containing all of your reasoning and analysis. After the scratchpad, provi
 starting with a brief summary followed by a detailed explanation. Do not include any introductory text before the
 <scratchpad>tags.
 
-ALWAYS write out parseable pieces (code, markdown, latex, webapps etc) in artefacts so the user can both version, execute and copy/paste what you deem interesting
+ALWAYS write out parseable pieces (code, markdown, latex, webapps etc) in artifacts so the user can both version, execute and copy/paste what you deem interesting
 </output_instructions>
