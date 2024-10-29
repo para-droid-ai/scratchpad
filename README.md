@@ -58,11 +58,11 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 ## Installation
 
 - For AI Profile, copy/paste the prompt from: [AI Profile Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_AI-Profile.md)
-- For PPLX Collections, copy/paste the prompt from: [PPLX Collection Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_collection.md)
+- For PPLX Spaces, copy/paste the prompt from: [PPLX Space Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_space.md)
 
 ## Usage
 
-Once Scratchpad is added to your AI Profile/PPLX Collection, it will automatically enhance your AI's reasoning capabilities. Here’s how it works:
+Once Scratchpad is added to your AI Profile/PPLX Space (via Space Prompt or File), it will enhance your AI's reasoning capabilities. Here’s how it works:
 
 1. **Automatic Activation**:
     - Scratchpad will be automatically triggered during interactions, enhancing the AI's ability to reason and provide insightful responses.
@@ -76,7 +76,7 @@ Once Scratchpad is added to your AI Profile/PPLX Collection, it will automatical
 4. **Cognitive Operations**:
     - Automatically identifies key elements, restates questions, analyzes perspectives, and applies advanced reasoning processes to generate high-quality answers.
 
-By integrating Scratchpad into your AI Profile/PPLX Collection, the framework seamlessly improves the AI's performance, ensuring sophisticated and insightful responses.
+By integrating Scratchpad into your AI Profile/PPLX Space, the framework seamlessly improves the AI's performance, ensuring sophisticated and insightful responses.
 
 ## Contributing
 
