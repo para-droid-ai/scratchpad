@@ -21,6 +21,7 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 - **Dynamic Contextual Adaptation**: Adapts to changes in user context dynamically, ensuring ongoing relevance in responses.
 - **Transparent Reasoning "Blackbox"**: Establishes a "blackbox" for the model's reasoning, enabling users to verify the model's logic and confirm its understanding of user context.
 - **Multi-Step Reasoning**: Identifies key elements, analyzes user perspectives, and applies cognitive operations like abstraction, comparison, and inference.
+- **Calibration of User Intent**: Aims to calibrate the model to align closely with the user's intent and context, enhancing the relevance and accuracy of responses.
 - **Advanced Logic**: Utilizes advanced reasoning to connect the dots and provide insightful responses.
 - **Error Detection and Correction**: Detects and corrects potential errors in reasoning, enhancing response reliability.
 - **User Feedback Integration**: Integrates user feedback into the reasoning process, improving performance over time.
