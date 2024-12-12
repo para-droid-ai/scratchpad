@@ -1,6 +1,6 @@
 # Scratchpad
 
-Scratchpad is a user-defined framework designed for a sophisticated AI assistant capable of deep reasoning and providing insightful responses to user inquiries. The framework works as a form of "user/machine" calibration, with a focus on user-context and user-intent. This README provides an overview, installation instructions, usage guidelines, and contribution information.
+Scratchpad is a user-defined framework designed for a sophisticated AI assistant capable of deep reasoning and providing insightful responses to user inquiries. The framework works as a form of "user/machine" calibration, with a focus on user-context and user-intent. The "power" is in seeing your ideas broken down logically from A to B to Z. This README provides an overview, installation instructions, usage guidelines, and contribution information.
 
 ## Table of Contents
 - [Overview](#overview)
