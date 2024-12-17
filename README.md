@@ -1,5 +1,7 @@
 # Scratchpad
 
+**Update: With the Complexity Exstenion 1.0 release, canvas has been removed for a rework. as of 12/17/2024, the "better-codeblocks" CPLX plugin can be used to mimic Scratchpad Canvas. Please visit the [CPLX Discord](https://discord.gg/fxzqdkwmWx) for more information/guides for now.**
+
 Scratchpad is a user-defined framework designed for a sophisticated AI assistant capable of deep reasoning and providing insightful responses to user inquiries. The framework works as a form of "user/machine" calibration, with a focus on user-context and user-intent. The "power" is in seeing your ideas broken down logically from A to B to Z. This README provides an overview, installation instructions, usage guidelines, and contribution information.
 
 ## Table of Contents
