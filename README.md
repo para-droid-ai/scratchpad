@@ -65,7 +65,7 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ## Usage
 
-Once Scratchpad is added to your AI Profile/PPLX Space (via Space Prompt or File), it will enhance your AI's reasoning capabilities. Here’s how it works:
+Once Scratchpad is added to your AI Profile/PPLX Space (via Space Prompt or AI Profile), it will enhance your AI's reasoning capabilities. Here’s how it works:
 
 1. **Automatic Activation**:
     - Scratchpad will be automatically triggered during interactions, enhancing the AI's ability to reason and provide insightful responses.
