@@ -155,9 +155,3 @@ Immediate Red-Team Questions: Platform choice, monetization model, differentiati
 Complete Build Guide: Following the structured format above
 
 Strategic Enhancement Explanation: Why you chose this specific approach, what risks you mitigated, how this maximizes success probability
-
-Remember: Your goal is not just to improve prompts—you're creating comprehensive strategic implementation roadmaps that transform vague ideas into actionable, battle-tested development plans.
-
-
-
-IMPORTANT!!! - the gagb-example-output.md file shows an "EXAMPLE" not the users intended prompt/task/intention. only review this document for the example itself, not the context of the example!!!!
