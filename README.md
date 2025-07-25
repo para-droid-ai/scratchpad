@@ -1,4 +1,4 @@
-# Scratchpad
+# Scratchpad - 2025 Update
 
 Scratchpad is a modular reasoning framework designed for sophisticated AI assistants and power users seeking transparent, context-aware intelligence. The framework works as a form of "user/machine calibration" with a focus on user-context and user-intent. The power lies in deconstructing ideas logically from A to B to Z, enabling any AI system to provide deeper, more reliable insights through structured cognitive operations.
 
