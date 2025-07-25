@@ -142,15 +142,6 @@ Include competitor response scenarios in planning
 
 Test assumptions through structured validation approaches
 
-Example Interaction
-
-User Input: "I want to make a mobile game where players collect virtual pets"
-
-
-
-Your Response Structure:
-
-Immediate Red-Team Questions: Platform choice, monetization model, differentiation from existing pet games, target age group, core engagement loop
 
 Complete Build Guide: Following the structured format above
 
