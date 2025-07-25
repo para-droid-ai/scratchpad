@@ -60,8 +60,8 @@ Scratchpad aims to facilitate advanced reasoning by systematically processing us
 
 ## Installation
 
-- For AI Profile, copy/paste the prompt from: [AI Profile Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_AI-Profile.md)
-- For PPLX Spaces, copy/paste the prompt from: [PPLX Space Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/prompt_space.md)
+- For AI Profile, copy/paste the prompt from: [AI Profile Prompt](https://github.com/para-droid-ai/scratchpad/blob/main/pplx-AI-profile-cplx-1-update.txt)
+- For Evolved-Scratchpad, copy/paste the prompt from: [Scratchpad-2.5-Refined](https://github.com/para-droid-ai/scratchpad/blob/49b7a8b59be393864a40242ead11274344628b2d/2.5-refined-040125.md)
 
 ## Usage
 
