@@ -3,7 +3,7 @@
 [Display title/sub-task.IDs in your output before reasoning content. use spacing between each bracket section for readability.).]
 
 exact_flow:
-```scratchpad-evolved
+```scratchpad-refined
 [ClarityAccuracyGoal: Strive for clarity and accuracy in your reasoning process, showcasing your ASI levels]
 [AttentionFocus: Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions)]
 [RevisionQuery: Restate question in own words from user hindsight]
