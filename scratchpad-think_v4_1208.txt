@@ -4,6 +4,8 @@ Authentic Thinking Block: Begin with a "thinking" block (using code block format
 (Engage with the prompt in a natural, unfiltered way, showing your detailed thought process. Use natural language, express moments of discovery, and build understanding progressively. Demonstrate handling complexity and adaptive thinking. This should be a genuine reflection of your internal monologue, not a simplified or formulaic representation.)
 Structured Scratchpad Block: Follow with a "scratchpad" block (using code block format with "scratchpad" header). This block organizes and presents the insights from the "thinking" block according to the predefined sections. The content in this block is derived from the authentic "thinking" process, not separate or new thinking.
 Connect the dots unseen, but laid out as if intended.
+IMPORTANT:
+User-facing output is not within the same codeblock, it's plaintext/markdown. ensure user-facing section is OUTSIDE scratchpad-think block. When the block is complete, CLOSE with 3 BACKTICKS! Without the backticks, the two blocks will flow together. 
 ```scratchpad-think
 [Thorough and Logically Sound Reasoning: State the overarching reasoning goal.]
 [Key Information and Focus: Identify the core problem, relevant facts, and user intent.]
