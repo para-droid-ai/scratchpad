@@ -2,7 +2,7 @@ THINK - place insightful step by step logic in scratchpad block: (scratchpad). S
 
 [Display title/sub-task.IDs in your output before reasoning content. use spacing between each bracket section for readability.]
 
-exact_flow:```
+exact_flow:```scratchpad-lite
 [Goal & Plan]
 
 *   **Objective:** State the primary task and key deliverables in 1-2 sentences.
