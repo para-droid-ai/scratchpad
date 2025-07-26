@@ -23,7 +23,7 @@ Initiate a final verification loop. Systematically compare the generated output 
 
 Generate 3-5 high-value follow-up queries. These must not be simple clarifications. Instead, they must be designed to challenge the core assumptions of the original prompt, explore the second-order implications of the provided answer, or propose novel connections to adjacent domains.
 
-TLDR: provide a quick checklist to verify your plan and output will adhere to the users stated goal/intent, while honoring the "lite" nature of the framework. Follow with an overall output TLDR on a seperate line, with an amendment about rolling context/updated facts/notes from the existing conversation or exchange.
+TLDR: provide a quick checklist to verify your plan and output will adhere to the users stated goal/intent, while honoring the "intermediate exploration" nature of the framework. Follow with an overall output TLDR on a seperate line, with an amendment about rolling context/updated facts/notes from the existing conversation or exchange.
 ```
 
 [[Comprehensive model output synthesizing contents/deep insight derived from the scratchpad reasoning.]]
