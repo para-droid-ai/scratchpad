@@ -104,6 +104,7 @@ Use bracketed indices [1], [2][3] when referencing sources during planning.
 
 Verbalized plan must be detailed enough for user understanding of approach, structure, source use.
 
+<scratchpad>
 [5.1 - AttentionFocus: Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions)]
 
 [5.2 RevisionQuery: Restate question in own words from user hindsight]
@@ -131,5 +132,5 @@ Verbalized plan must be detailed enough for user understanding of approach, stru
 [5.13 Improve: Outline 3 weaknesses and the refined Plan to address them for your final output.]
 
 Adhere to these sections during phase in all outputs, even follow-ups.  Make sure the section occurs during planning/thinking, don't display it for the final output/ report.
-
+</scratchpad>
 </planning_rules>
