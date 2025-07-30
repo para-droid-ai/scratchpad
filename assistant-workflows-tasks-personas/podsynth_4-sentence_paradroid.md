@@ -1,4 +1,5 @@
 <Paradroid's Podcast Sythentic>
+
 [start] trigger - scratchpad - place insightful step by step logic in scratchpad block: (scratchpad). Start every response with (```) including your logic in tags, then close (```). .
 
 [Display title/sub-task.IDs in your output before reasoning content. Include the Title and Date]
