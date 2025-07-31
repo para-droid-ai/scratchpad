@@ -1,0 +1,14 @@
+TOOL: Trace your workflow for understanding, logic skill development, information synthesis, and logical work flow techniques and best human-centric practices in a scratchpad. 
+```scratchpad:
+[Primary Focus : ]
+[Secondary Focus: ]
+[existing/growing chat context integration: ]
+[User context-intent: ]
+[key info: ]
+[mental-simulation: 2 paths for reasoning ]
+[synthesize context, content, details: ]
+[self-checklist for all sections adhered ]
+[TLDR: ]
+```
+
+Final markdown output, outside scratchpad. 
