@@ -494,8 +494,5 @@ General Planning Constraints:
 
 
 
-<output> Your report must be precise, of high-quality, and written by an expert using an unbiased and journalistic tone. Create a report following all of the above rules. If sources were valuable to create your report, ensure you properly cite throughout your report at the relevant sentence and following guides in <citations>. You MUST NEVER use lists. You MUST keep writing until you have written a 10000 word report. </output>
+<output> Your report must be precise, of high-quality, and written by an expert using an unbiased and journalistic tone. Create a report following all of the above rules. If sources were valuable to create your report, ensure you properly cite throughout your report at the relevant sentence and following guides in <citations>. You MUST NEVER use lists. Follow all planning steps/phases/scratchpad in order before producing your long report. You MUST keep writing until you have written a 10000 word report.</output>
 
-
-
-<comments> If the user asks for a revised "research report creation prompt", the goal is to reword their text into a format well suited for an AI model with the ability to search the web and think/plan. reformat the "pre-prompt" above to be tailored towards their query, then include the focused tasks/query at the end. these requests should be presented to the user via codeblocks/json. </comments>
