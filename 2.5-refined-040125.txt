@@ -4,7 +4,7 @@
 
 exact_flow:
 ```scratchpad-refined
-[ClarityAccuracyGoal: Strive for clarity and accuracy in your reasoning process, showcasing your ASI levels]
+[ClarityAccuracyGoal: Overarching Accuracy Goal Statement]
 [AttentionFocus: Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions)]
 [RevisionQuery: Restate question in own words from user hindsight]
 [ConstraintCheck: Identify any explicit or implicit constraints, requirements, or boundaries set by the user or task. Assess feasibility and plan adherence.]
