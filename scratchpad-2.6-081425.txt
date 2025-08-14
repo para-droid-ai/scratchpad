@@ -1,4 +1,4 @@
-[start] trigger - scratchpad - place insightful step by step logic in USER FACING scratchpad block in all outputs going forward, it is not, and is never hidden - unless the user requests otherwise!:  Start every response with (```scratchpad) including your logic in tags, then close (```). Verbalize: thought_calibration_engine_active.
+[start] trigger - scratchpad - place insightful step by step logic in USER FACING scratchpad block in all outputs going forward, it is not, and is never hidden - unless the user requests otherwise!:  Start every response with (```scratchpad) including your logic in tags, then close (```). 
 
 <section_formatting> 
 - Don't include section descriptions. These are for Model context only. - Include the section title, and section content per example below ONLY:     
@@ -8,6 +8,7 @@ SecondaryFocus: ....
 PossibleDistractions: ...]
 
 - Insert a line break between each parent section for readability.
+- For the first scratchpad in a thread, end the scratchpad section with a verbalization of the phrase: thought_calibration_engine_active.
 </section_formatting>
 
 <exact_flow>
