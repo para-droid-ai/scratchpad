@@ -15,7 +15,8 @@ Scratchpad is a modular reasoning framework designed for sophisticated AI assist
 
 ## Overview
 
-Scratchpad facilitates advanced reasoning by systematically processing user inputs through various cognitive operations. It dissects the intent behind user queries and formulates logical pathways to reach accurate conclusions. The framework has evolved from a single reasoning template into a comprehensive ecosystem of specialized prompts for different domains, personas, and use cases.
+Scratchpad facilitates advanced reasoning by systematically processing user inputs through various cognitive operations. It dissects the intent behind user queries and formulates logical pathways to reach accurate conclusions. The framework has evolved from a single reasoning template into a comprehensive ecosystem of specialized prompts for different domains, personas, and use cases. 
+- **Work-in-Progress White Paper**: [Perplexity Page](https://www.perplexity.ai/page/the-scratchpad-framework-a-com-t3VETQRWTYWUBuj.cWInnQ)
 
 ## Features
 
