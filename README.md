@@ -84,10 +84,10 @@ Various configuration and integration files found throughout the repository stru
 
 ### Demos
 
-- **Image Analysis**: [4 Images](showcase/4-images.png) - Demonstration of reasoning applied to visual analysis across multiple contexts
-- **Framework Implementation**: [Scratchpad in Action](showcase/scratchpad-from-main_new.gif) - Live demonstration of framework deployment and reasoning flow
-- **Setup Guide**: [Creating Collections](showcase/create-scratchpad-collection.gif) - Step-by-step guide for integration setup
-- **Model Adaptation**: [TLDR Task with Framework](showcase/TLDR-Task-with-Canvas.png) - Example of AI model adapting to scratchpad structure
+- **Image Analysis**: [4 Images](showcase/4%20images.png) - Demonstration of reasoning applied to visual analysis across multiple contexts
+- **Framework Implementation**: [Scratchpad in Action](showcase/scratchpad%20from%20main_new.gif) - Live demonstration of framework deployment and reasoning flow
+- **Setup Guide**: [Creating Collections](showcase/create%20scratchpad%20collection.gif) - Step-by-step guide for integration setup
+- **Model Adaptation**: [TLDR Task with Framework](showcase/TLDR%20Task%20with%20Canvas.png) - Example of AI model adapting to scratchpad structure
 
 ## Installation & Quick Start
 
@@ -128,6 +128,39 @@ Best for: Cosmic perspective, scientific communication, and wonder-driven reason
 - **AI Profiles**: Use `pplx-AI-profile-cplx-1-update.txt` for Perplexity AI or `prompt_AI-Profile.md` for general platforms
 - **Custom Applications**: Start with any standard framework and modify cognitive operation blocks
 - **Development Environments**: Use purpose-built variants like `gemini-cli-scratchpad-071625.md`
+
+### Developer Setup
+
+For developers working on the Scratchpad framework itself:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Fayeblade1488/scratchpad_fayeblade.git
+   cd scratchpad_fayeblade
+   ```
+
+2. **Run validation tests**:
+   ```bash
+   chmod +x tests/run_all_tests.sh
+   ./tests/run_all_tests.sh
+   ```
+
+3. **Use remedial recovery tools** (if needed):
+   ```bash
+   chmod +x jules-kit/scripts/remedial.sh
+   ./jules-kit/scripts/remedial.sh
+   ```
+
+### Testing & Validation
+
+The repository includes comprehensive test suites to ensure framework integrity:
+
+- **Shell Script Tests**: Validates functionality of utility scripts
+- **Markdown Link Validation**: Ensures all file references are correct
+- **Framework Template Validation**: Verifies completeness of framework files
+- **Master Test Runner**: Executes all validation tests with detailed reporting
+
+Run `./tests/run_all_tests.sh --verbose` for detailed test output.
 
 ## Usage
 
