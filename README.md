@@ -37,9 +37,9 @@ Scratchpad facilitates advanced reasoning by systematically processing user inpu
 
 Core, general-purpose scratchpad templates for reasoning, clarity, and calibration across any domain.
 
-- **[2.5-refined-040125.txt](2.5-refined-040125.txt)** - Latest comprehensive framework with advanced cognitive operations
-- **[2.5-medium-071825.txt](2.5-medium-071825.txt)** - Intermediate version with balanced complexity
-- **[scratchpad-lite-071625.txt](scratchpad-lite-071625.txt)** - Streamlined version for quick deployment
+- **[2.5-refined-040125.md](2.5-refined-040125.md)** - Latest comprehensive framework with advanced cognitive operations
+- **[2.5-medium-071825.md](2.5-medium-071825.md)** - Intermediate version with balanced complexity
+- **[scratchpad-lite-071625.md](scratchpad-lite-071625.md)** - Streamlined version for quick deployment
 - **[scratchpad-think_v4_1208.txt](scratchpad-think_v4_1208.txt)** - Classic thinking-focused template
 - **[pplx-AI-profile-cplx-1-update.txt](pplx-AI-profile-cplx-1-update.txt)** - Optimized for Perplexity AI profiles
 
@@ -47,13 +47,11 @@ Core, general-purpose scratchpad templates for reasoning, clarity, and calibrati
 
 Specialized frameworks designed for specific domains, tasks, or professional contexts.
 
-- **[G.A.B.G.md](purpose-built/G.A.B.G.md)** - Game/App Build Guide Generator with red-team analysis and phased development
-- **[Mental Sandbox Simulation.md](purpose-built/Mental%20Sandbox%20Simulation.md)** - Creative exploration and hypothesis testing
-- **[P.I.R.A.md](purpose-built/P.I.R.A.md)** - Prompt Improver/Reworder Assistant for meta-reasoning
+- **[G.A.B.G-Phased App-Game Design.txt](purpose-built/G.A.B.G-Phased%20App-Game%20Design.txt)** - Game/App Build Guide Generator with red-team analysis and phased development
 - **[deeper_research_040125.md](purpose-built/deeper_research_040125.md)** - Systematic research and cross-domain synthesis
 - **[gemini-cli-scratchpad-071625.md](purpose-built/gemini-cli-scratchpad-071625.md)** - Optimized for Gemini CLI environments
-- **[novelize-ai.md](purpose-built/novelize-ai.md)** - Story and character-driven narrative planning
-- **[Human Condition Benchmark.md](purpose-built/Human%20Condition%20Benchmark,md)** - Specialized human behavioral analysis
+- **[novelize_output_review_GPT-5-080825.txt](purpose-built/novelize_output_review_GPT-5-080825.txt)** - Story and character-driven narrative planning
+- **[Human Condition Benchmark.md](purpose-built/Human%20Condition%20Benchmark.md)** - Specialized human behavioral analysis
 - **[Sonnet 3.7 Thinking.md](purpose-built/Sonnet%203.7%20Thinking.md)** - Enhanced framework for Claude Sonnet 3.5/3.7 chain-of-thought planning
 
 ### Persona-Based
@@ -61,7 +59,7 @@ Specialized frameworks designed for specific domains, tasks, or professional con
 Reasoning frameworks that embody specific personas, mindsets, or philosophical approaches to problem-solving.
 
 - **[saganpad_072525.md](purpose-built/saganpad_072525.md)** - **Flagship Persona Framework** - Channels Carl Sagan's cosmic perspective with wonder, skeptical inquiry, and empathetic communication
-- **[U.C.E.I.N.md](purpose-built/U.C.E.I.N.md)** - Unified Consciousness Embodiment framework for integrated perspective-taking
+- **[Unified Conscious Embodiment.md](purpose-built/Unified%20Conscious%20Embodiment.md)** - Unified Consciousness Embodiment framework for integrated perspective-taking
 
 ### Experimental & Legacy
 
@@ -86,10 +84,10 @@ Various configuration and integration files found throughout the repository stru
 
 ### Demos
 
-- **Image Analysis**: [4 Images](showcase/4%20images.png) - Demonstration of reasoning applied to visual analysis across multiple contexts
-- **Framework Implementation**: [Scratchpad in Action](showcase/scratchpad%20from%20main_new.gif) - Live demonstration of framework deployment and reasoning flow
-- **Setup Guide**: [Creating Collections](showcase/create%20scratchpad%20collection.gif) - Step-by-step guide for integration setup
-- **Model Adaptation**: [TLDR Task with Framework](showcase/TLDR%20Task%20with%20Canvas.png) - Example of AI model adapting to scratchpad structure
+- **Image Analysis**: [4 Images](showcase/4-images.png) - Demonstration of reasoning applied to visual analysis across multiple contexts
+- **Framework Implementation**: [Scratchpad in Action](showcase/scratchpad-from-main_new.gif) - Live demonstration of framework deployment and reasoning flow
+- **Setup Guide**: [Creating Collections](showcase/create-scratchpad-collection.gif) - Step-by-step guide for integration setup
+- **Model Adaptation**: [TLDR Task with Framework](showcase/TLDR-Task-with-Canvas.png) - Example of AI model adapting to scratchpad structure
 
 ## Installation & Quick Start
 
@@ -103,7 +101,7 @@ Best for: Comprehensive reasoning across all domains
 
 **Evolved Framework**
 ```
-Copy/paste from: 2.5-interm-071825.md  
+Copy/paste from: 2.5-medium-071825.md
 Best for: Balanced complexity and performance
 ```
 
@@ -186,7 +184,7 @@ For questions, discussions, or collaboration opportunities, engage through [Issu
 
 ## License
 
-Scratchpad is licensed under the MIT License - see the [LICENSE](license.txt) file for details.
+Scratchpad is licensed under the MIT License - see the [license.txt](license.txt) file for details.
 
 **Free for any purpose with attribution.** Fork, modify, commercialize, and distribute while maintaining the open-source spirit that drives innovation in AI reasoning frameworks.
 
