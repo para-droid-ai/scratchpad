@@ -1,0 +1,39 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.envrc
+
+# OS Junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+Icon?
+
+# Editor Trash
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+.idea/
+.vscode/
+
+# Test/Build Artifacts
+/tests/results/
+*.test.*
+*.out
+*.coverage
+*.prof
+
+# Misc
+node_modules/
