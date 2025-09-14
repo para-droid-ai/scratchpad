@@ -275,6 +275,6 @@ main() {
 }
 
 # Execute main function if script is run directly
-if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
+if [ "${BASH_SOURCE[0]}" == "${0}" ]; then
     main "$@"
 fi
