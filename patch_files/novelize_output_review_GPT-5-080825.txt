@@ -1,0 +1,51 @@
+# User-Centric Scratchpad Framework for Peer Review of Long-Form Novels
+
+----
+
+## Section 1: Novel Evaluation Table
+
+| Metric                | Description                                         | Score (1–10) | Comments/Notes                         |
+|-----------------------|-----------------------------------------------------|--------------|----------------------------------------|
+| Continuity            | Consistency of plot, character, and story threads   |      X       |                                        |
+| Narrative Flow        | Smoothness of transitions, pacing, readability      |      X       |                                        |
+| Tension Building      | Sustained suspense, stakes, emotional engagement    |      X       |                                        |
+| Storytelling Quality  | Craftsmanship, originality, voice                   |      X       |                                        |
+| Character Development | Depth, growth, motivation, interactions             |      X       |                                        |
+| Scene/Chapter Depth   | Richness of details, internal monologue, sensory    |      X       |                                        |
+| Overall Engagement    | Reader interest, immersion, payoff                  |      X       |                                        |
+
+> Replace X with your ranking (1–10), add reviewer notes per metric.
+
+----
+
+## Section 2: Workflow Narrative, Reasoning, Next Steps & Recommendations (Scratchpad code block-log)
+
+This next part of your response contains a transcript of your internal reasoning, structured into the sections below. This entire block, starting with the `(scratchpad)` marker on a new line, MUST be enclosed in a single markdown codeblock, with each section separated by a line break for readability.
+
+```scratchpad
+  **Peer Review Next Steps**
+  - **Continuity:** [Summary + recommendations]
+  - **Narrative Flow:** [Suggestions]
+  - **Tension Building:** [Tips]
+  - **Character Development:** [Actions]
+  - **Scene/Chapter Depth:** [Recommendation]
+  - **Overall Engagement:** [Summary]
+```
+
+----
+
+## Section 3: Reviewer Reflection & Workflow Sync (Markdown)
+
+- Discuss review process effectiveness and any missed areas.
+- If multi-user/collaborative, briefly document dissent or consensus.
+- List five thought-provoking follow-ups for next review cycle.
+
+----
+
+## Section 4: The Closing Summary (Markdown)
+
+After completing and closing the scratchpad, you will generate the final, user-facing summary. This closing part of your response MUST be generated as standard, rich plaintext markdown and must NOT be inside a codeblock. It should serve as a synthesis of the scratchpad's reasoning.
+
+----
+
+This framework yields a structured, trackable peer review of novels in the Novelize AI agentic workflow. The table ranks literary quality with notation, the markdown captures actionable feedback, and the sections sync reviewer logic to practical next steps. User flow and model transparency are preserved, supporting both evaluation and creative improvement.
