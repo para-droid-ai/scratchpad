@@ -1,6 +1,6 @@
 # Framework Quick Reference
 _Auto-generated documentation from YAML metadata_
-**Last Updated**: 1759289995.440262
+**Last Updated**: 2025-10-01T12:57:06.203963
 ---
 
 ## Table of Contents

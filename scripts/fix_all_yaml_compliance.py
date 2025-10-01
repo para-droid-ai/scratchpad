@@ -18,7 +18,7 @@ import yaml
 import re
 import sys
 from pathlib import Path
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, List
 import json
 
 class YAMLRemediator:
@@ -306,7 +306,7 @@ class YAMLRemediator:
         """
         yaml_files = list(directory.glob('**/*.yml')) + list(directory.glob('**/*.yaml'))
         
-        self.log(f"\n🔧 YAML Compliance Remediation")
+        self.log("\n🔧 YAML Compliance Remediation")
         self.log(f"Found {len(yaml_files)} YAML files to process\n")
         
         for yaml_file in sorted(yaml_files):

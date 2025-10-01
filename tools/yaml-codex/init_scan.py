@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import os, sys, hashlib, json, pathlib
+import os
+import sys
+import hashlib
+import json
 
 def sha256(path):
     h = hashlib.sha256()
