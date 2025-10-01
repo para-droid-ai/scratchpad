@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-import sys, yaml, pathlib
+import sys
+import yaml
+import pathlib
 
 def main():
     files = [p for p in map(pathlib.Path, sys.argv[1:]) if p.suffix in ('.yml', '.yaml')]

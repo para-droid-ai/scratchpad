@@ -11,7 +11,6 @@ Date: 2025-10-01
 
 import yaml
 from pathlib import Path
-import re
 
 # Metadata templates based on framework patterns
 METADATA_TEMPLATES = {
@@ -152,7 +151,6 @@ def add_metadata_to_framework(yaml_path):
     
     # Extract framework base name
     filename = yaml_path.stem
-    base_name = filename
     
     # Try to find matching template
     template = None

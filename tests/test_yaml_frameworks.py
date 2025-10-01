@@ -7,11 +7,9 @@ Author: Warp AI Agent
 Date: 2025-10-01
 """
 
-import os
 import sys
 import yaml
 from pathlib import Path
-from collections import Counter
 import re
 
 def test_yaml_syntax():
@@ -225,7 +223,7 @@ def test_content_uniqueness():
                 # Normalize: lowercase, remove extra whitespace
                 normalized = re.sub(r'\s+', ' ', content[:500].lower())
                 content_samples[yaml_file.name] = normalized
-        except:
+        except Exception:
             continue
     
     # Simple similarity check - look for exact duplicates
