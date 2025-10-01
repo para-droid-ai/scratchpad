@@ -66,7 +66,7 @@ python3 tests/test_yaml_frameworks.py
 MIT License - Free for commercial and personal use.
 
 ## Project Overview
-- **30 frameworks** (10 core, 18 purpose-built, 2 personas)
+- **30 frameworks** persona and framework rework
 - **70% file reduction** (240 → 73 files)
 - **19% size reduction** (149MB → 121MB)
 - **100% YAML validation** passing
