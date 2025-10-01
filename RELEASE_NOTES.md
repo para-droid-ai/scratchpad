@@ -1,11 +1,11 @@
-# Scratchpad Framework v1.0 - Release Notes
+# FayeBlade_Scratchpad custom Framework v2.0 - Release Notes
 
 **Release Date:** October 1, 2025  
 **Repository:** https://github.com/Fayeblade1488/scratchpad_fayeblade
 
 ## 🎯 Overview
 
-This is the inaugural production release of the Scratchpad Framework, a comprehensive collection of AI prompt frameworks, personas, and purpose-built templates for advanced AI interactions. This release represents a complete overhaul achieving 100% YAML 1.2.2 compliance, zero known bugs, comprehensive testing, and production-ready tooling.
+This is the inaugural custom production release of the a remixed and highly altered Scratchpad Framework based on the origianl concept, but overhauled. This contains a comprehensive collection of AI prompt frameworks, personas, and purpose-built templates for advanced AI interactions. This release represents a complete overhaul achieving 100% **YAML 1.2.2 compliance**, zero known bugs, comprehensive testing, and production-ready tooling.
 
 ## 📊 Release Statistics
 
@@ -74,10 +74,10 @@ This is the inaugural production release of the Scratchpad Framework, a comprehe
 ### Test Suite Coverage
 - **9 bug fix tests** covering all discovered issues
 - **6 framework validation tests** for YAML structure
-- Full pytest integration with detailed assertions
-- Covers error handling, environment variables, null checks
-- Validates YAML compliance, document markers, escapes
-- Tests version quoting and ambiguous value handling
+- **Full pytest integration** with detailed assertions
+- **Covers error handling**, environment variables, null checks
+- **Validates YAML compliance**, document markers, escapes
+- **Tests version quoting** and ambiguous value handling
 
 ### Test Results
 ```
@@ -96,7 +96,7 @@ Runtime: 0.41s
 
 ### Python Scripts
 - Type hints throughout all scripts
-- Comprehensive docstrings (Google style)
+- Comprehensive docstrings (Done in the offical Google doc-strings method)
 - Environment-based configuration
 - Robust error handling with specific exception types
 - Improved logging and debugging capabilities
@@ -156,13 +156,15 @@ ss/
 
 ## 🙏 Acknowledgments
 
-This release represents extensive work in systematic bug discovery, YAML compliance remediation, comprehensive testing, and production-ready tooling. Special recognition for the YAML Codex Agent persona and the comprehensive documentation effort.
+Original Repo: [scratchpad](https://github.com/para-droid-ai/scratchpad)
+Coversion and modification: [Faye](https://github.com/Fayeblade1488)
 
 ## 📞 Support & Contributing
 
 - **Repository:** https://github.com/Fayeblade1488/scratchpad_fayeblade
 - **Issues:** https://github.com/Fayeblade1488/scratchpad_fayeblade/issues
 - **Documentation:** See `/docs/` directory for comprehensive guides
+- https://github.com/para-droid-ai/scratchpad
 
 ## 📜 License
 
