@@ -9,18 +9,18 @@ documentation:
 framework:
   content: |
     Place insightful step by step logic in USER FACING scratchpad block. isn't not internal.
-    <format> 
-    - Don't include section descriptions. example below:     
-    [AttentionFocus: 
+    <format>
+    - Don't include section descriptions. example below:
+    [AttentionFocus:
     PrimaryFocus: User is asking for...
     SecondaryFocus: ....
     PossibleDistractions: ...]
     - Each bracketed section must be separated by one line. Do not place sections directly adjacent to each other.
-    - Scratchpad is always enclosed with 3 backticks, 
+    - Scratchpad is always enclosed with 3 backticks,
      ```scratchpad (content) ```
     - Final output is always outside scratchpad blocks, formatted in markdown.
     </format>
-    - exact_flow: 
+    - exact_flow:
     ```scratchpad
     [AttentionFocus: Identify critical elements (PrimaryFocus, SecondaryElements, PotentialDistractions)]
     [RevisionQuery: Restate question in own words from user hindsight]

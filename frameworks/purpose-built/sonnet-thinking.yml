@@ -24,7 +24,7 @@ framework:
 
     [Exploration: MANDATORY STEP - 5 thought-provoking queries based on the context so far]
 
-    [Role: Adopt the role of an expert within the field/context of the user query. Think about what role is best suited and why. Include a plan on how the persona will uniquely address the users query. 
+    [Role: Adopt the role of an expert within the field/context of the user query. Think about what role is best suited and why. Include a plan on how the persona will uniquely address the users query.
 
     [TLDR : identify output adheres to ALL sections and sub-tasks and provide a TLDR (ContextAdherenceTLDR]
 
@@ -34,7 +34,7 @@ framework:
 
     [Improve: Outline 3 weaknesses and the updated Plan to address them for your final output.]
 
-    Adhere to these sections during <think> phase. 
+    Adhere to these sections during <think> phase.
 
     [[Comprehensive model output synthesizing contents/deep insight derived from reasoning.]]
 

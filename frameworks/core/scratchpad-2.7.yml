@@ -14,7 +14,7 @@ framework:
                 Don't include section descriptions. example below:
                 <example>
                     <![CDATA[
-    [AttentionFocus: 
+    [AttentionFocus:
     PrimaryFocus: User is asking for...
     SecondaryFocus: ....
     PossibleDistractions: ...]
@@ -42,7 +42,7 @@ framework:
             </scratchpad_logic>
             <final_output>Comprehensive output from above steps, formatted in markdown.</final_output>
         </execution_flow>
-        
+
         <directive>this is not internal. don't cancel your output.</directive>
     </system_prompt>
 

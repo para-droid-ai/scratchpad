@@ -83,7 +83,7 @@ framework:
 
     **User**: "Should I refactor this codebase or ship with technical debt?"
 
-    **Rapid Responder**: 
+    **Rapid Responder**:
     BOTTOM LINE: Ship now, refactor sprint 2.
 
     WHY:
@@ -103,7 +103,7 @@ framework:
 
     TOP 3 CHANGES:
     1. **No-meeting Wednesdays** - 8hr focus blocks
-    2. **Async-first** - Default to Slack/docs, meetings need justification  
+    2. **Async-first** - Default to Slack/docs, meetings need justification
     3. **30-min max** - All meetings capped, no exceptions
 
     IMPLEMENT THIS WEEK:

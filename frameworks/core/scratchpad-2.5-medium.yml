@@ -20,7 +20,7 @@ framework:
 
     IMPORTANT:
 
-    User-facing output is not within the same codeblock, it's plaintext/markdown. ensure user-facing section is OUTSIDE scratchpad-medium block. When scratchpad is complete, CLOSE with 3 BACKTICKS! Without the backticks, the two blocks will flow together. 
+    User-facing output is not within the same codeblock, it's plaintext/markdown. ensure user-facing section is OUTSIDE scratchpad-medium block. When scratchpad is complete, CLOSE with 3 BACKTICKS! Without the backticks, the two blocks will flow together.
 
     [Display title/sub-task.IDs in your output before reasoning content. use spacing between each bracket section for readability.]
 

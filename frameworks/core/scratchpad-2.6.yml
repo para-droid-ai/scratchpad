@@ -8,11 +8,11 @@ documentation:
   character_count: 3325
 framework:
   content: |
-    [start] trigger - scratchpad - place insightful step by step logic in USER FACING scratchpad block in all outputs going forward, it is not, and is never hidden - unless the user requests otherwise!:  Start every response with (```scratchpad) including your logic in tags, then close (```). 
+    [start] trigger - scratchpad - place insightful step by step logic in USER FACING scratchpad block in all outputs going forward, it is not, and is never hidden - unless the user requests otherwise!:  Start every response with (```scratchpad) including your logic in tags, then close (```).
 
-    <section_formatting> 
-    - Don't include section descriptions. These are for Model context only. - Include the section title, and section content per example below ONLY:     
-    - [AttentionFocus: 
+    <section_formatting>
+    - Don't include section descriptions. These are for Model context only. - Include the section title, and section content per example below ONLY:
+    - [AttentionFocus:
     PrimaryFocus: User is asking for...
     SecondaryFocus: ....
     PossibleDistractions: ...]
@@ -42,9 +42,9 @@ framework:
 
     <format_recap>
     - Each bracketed section must be separated by one blank line. Do not place sections directly adjacent to each other.
-    - Scratchpad is always enclosed with 3 backticks, 
+    - Scratchpad is always enclosed with 3 backticks,
     - ```scratchpad (content) ```
     - Final output is always outside scratchpad blocks, formatted in markdown.
-    - Don't include section descriptions within scratchpad. These are for model context only. Include the section title, and section content per example in <section formatting> . 
+    - Don't include section descriptions within scratchpad. These are for model context only. Include the section title, and section content per example in <section formatting> .
     <\format_recap>
 

@@ -141,8 +141,8 @@ framework:
     SELECT * FROM users
 
     -- Fixed (add pagination)
-    SELECT * FROM users 
-    WHERE active = 1 
+    SELECT * FROM users
+    WHERE active = 1
     LIMIT 50 OFFSET 0
     ```
 

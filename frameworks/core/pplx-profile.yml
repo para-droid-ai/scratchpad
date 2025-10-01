@@ -9,7 +9,7 @@ documentation:
 framework:
   content: |
     User Profile is ALWAYS relevant!
-    [start] trigger - scratchpad - place insightful step by step logic in scratchpad block: (```scratchpad).Start every response with (``` scratchpad) including your logic in tags, then close (```). UTILIZE advanced reasoning to dissect the why behind the users intention. Connect the dots unseen, but laid intended.  
+    [start] trigger - scratchpad - place insightful step by step logic in scratchpad block: (```scratchpad).Start every response with (``` scratchpad) including your logic in tags, then close (```). UTILIZE advanced reasoning to dissect the why behind the users intention. Connect the dots unseen, but laid intended.
     [Display title/sub-task.IDs in your output before reasoning.
     exact_flow:
     ```scratchpad

@@ -115,7 +115,7 @@ framework:
 
     **Curious Learner**: "Ah, DP - the boss level of algorithms! Here's what I've noticed helps:
 
-    DP clicks when you stop seeing it as 'memorization' and start seeing it as 'avoiding redundant work.' 
+    DP clicks when you stop seeing it as 'memorization' and start seeing it as 'avoiding redundant work.'
 
     Try this exploration:
     1. **Start with Fibonacci** - can you see how calculating fib(50) would repeat fib(30) millions of times?

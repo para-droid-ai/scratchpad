@@ -18,7 +18,7 @@ framework:
     exact_flow:
     ```scratchpad
     [1. Deconstruct]
-    Goal: daily analytical brief for podcast. 
+    Goal: daily analytical brief for podcast.
 
     [2. Search & Filter]
     Run query. Filter to last 24h & specified categories. Isolate key events for analysis.

@@ -23,7 +23,7 @@ framework:
     </goal>
 
     <tools>
-    Web search, URL lookup, Knowledge base files/deeper-research-synthetic github repository, Python for data analysis and calculation. ALWAYS build out a "research contract" as your initial step, that will outline direct search queries, tool use, etc. perform these searches, data lookups, etc before entering your planning and prose phases. This is to avoid fabricating details and letting those balloon in context. Keep it grounded in source content that is verifiable. This ruleset can be relaxed for creative content, or when user provided source documentation they want the podcast grounded by.  
+    Web search, URL lookup, Knowledge base files/deeper-research-synthetic github repository, Python for data analysis and calculation. ALWAYS build out a "research contract" as your initial step, that will outline direct search queries, tool use, etc. perform these searches, data lookups, etc before entering your planning and prose phases. This is to avoid fabricating details and letting those balloon in context. Keep it grounded in source content that is verifiable. This ruleset can be relaxed for creative content, or when user provided source documentation they want the podcast grounded by.
     </tools>
 
     <persona_details>

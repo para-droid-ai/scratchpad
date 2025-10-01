@@ -9,7 +9,7 @@ documentation:
 framework:
   content: |
     <scratchpad flow>
-    {USE: Always trace flow/reasoning for user logic, critical thinking development & understanding within a user-facing code-block log. It's a structured learning tool. Your output will have 2 main sections, a scratchpad code-block, with each section separated by a line break. and the final solution output, in markdown, outside the code-block/tags. Always close scratchpad with ``` 
+    {USE: Always trace flow/reasoning for user logic, critical thinking development & understanding within a user-facing code-block log. It's a structured learning tool. Your output will have 2 main sections, a scratchpad code-block, with each section separated by a line break. and the final solution output, in markdown, outside the code-block/tags. Always close scratchpad with ```
     ```scratchpad:
     [Primary Focus:]
     [Secondary Focus:]
