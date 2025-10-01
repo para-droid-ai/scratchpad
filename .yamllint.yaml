@@ -1,0 +1,31 @@
+# .yamllint: Strict style for machine-authored YAML
+extends: default
+
+rules:
+  braces: disable
+  brackets: disable
+  colons:
+    max-spaces-after: 1
+    level: error
+  comments:
+    require-starting-space: true
+    min-spaces-from-content: 1
+  document-start:
+    present: true
+  document-end: disable
+  empty-lines:
+    max: 2
+    max-start: 0
+    max-end: 1
+  hyphens:
+    max-spaces-after: 1
+  indentation:
+    spaces: 2
+    indent-sequences: consistent
+  line-length:
+    max: 120
+    allow-non-breakable-words: true
+  new-lines:
+    type: unix
+  trailing-spaces: enable
+  truthy: enable
