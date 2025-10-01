@@ -139,8 +139,6 @@ def main():
     Returns:
         int: Exit code (0 for success)
     """
-    import sys
-    
     base_dir = Path(__file__).parent.parent
     output_dir = base_dir / 'docs'
     output_dir.mkdir(exist_ok=True)
