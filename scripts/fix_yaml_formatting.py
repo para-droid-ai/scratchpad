@@ -13,20 +13,35 @@ import yaml
 from pathlib import Path
 
 def fix_yaml_file(yaml_path):
-    """Fix a single YAML file to use literal block scalars."""
+    """Fix a single YAML file to use literal block scalars.
+    
+    Args:
+        yaml_path: Path object pointing to the YAML file
+        
+    Returns:
+        bool: True if file was modified
+        
+    Raises:
+        yaml.YAMLError: If YAML parsing fails
+        IOError: If file operations fail
+    """
     with open(yaml_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
+    
+    # Guard against None data
+    if not data:
+        return False
     
     # Manually construct the YAML with literal block scalars
     yaml_lines = []
     yaml_lines.append(f"name: {data['name']}")
     
-    # Version might be number or string
+    # Version might be number or string - quote defensively
     version = data.get('version', '')
     if isinstance(version, (int, float)):
-        yaml_lines.append(f"version: '{version}'")
+        yaml_lines.append(f"version: \"{version}\"")
     else:
-        yaml_lines.append(f"version: '{version}'")
+        yaml_lines.append(f"version: \"{version}\"")
     
     yaml_lines.append(f"category: {data['category']}")
     yaml_lines.append("documentation:")
@@ -59,8 +74,13 @@ def fix_yaml_file(yaml_path):
     return True
 
 def main():
-    """Process all YAML files in the frameworks directory."""
-    base_dir = Path(__file__).parent.parent
+    """Process all YAML files in the frameworks directory.
+    
+    Returns:
+        int: Exit code (0 for success)
+    """
+    import os
+    base_dir = Path(os.getenv('SCRATCHPAD_DIR', Path(__file__).parent.parent))
     frameworks_dir = base_dir / 'frameworks'
     
     fixed_count = 0

@@ -131,9 +131,24 @@ METADATA_TEMPLATES = {
 }
 
 def add_metadata_to_framework(yaml_path):
-    """Add metadata to a framework YAML file if missing."""
+    """Add metadata to a framework YAML file if missing.
+    
+    Args:
+        yaml_path: Path object pointing to the YAML file
+        
+    Returns:
+        bool: True if file was modified, False if already complete
+        
+    Raises:
+        yaml.YAMLError: If YAML parsing fails
+        IOError: If file operations fail
+    """
     with open(yaml_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
+    
+    # Guard against None data
+    if not data:
+        data = {}
     
     # Extract framework base name
     filename = yaml_path.stem
@@ -157,7 +172,7 @@ def add_metadata_to_framework(yaml_path):
     
     # Check what's missing
     changed = False
-    doc = data.get('documentation', {})
+    doc = data.get('documentation', {}) if data else {}
     
     if not doc.get('purpose'):
         doc['purpose'] = template['purpose']
@@ -183,8 +198,13 @@ def add_metadata_to_framework(yaml_path):
     return False
 
 def main():
-    """Process all framework files."""
-    base_dir = Path(__file__).parent.parent
+    """Process all framework files.
+    
+    Returns:
+        int: Exit code (0 for success)
+    """
+    import os
+    base_dir = Path(os.getenv('SCRATCHPAD_DIR', Path(__file__).parent.parent))
     frameworks_dir = base_dir / 'frameworks'
     
     updated_count = 0

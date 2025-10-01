@@ -12,14 +12,33 @@ Date: 2025-10-01
 import yaml
 from pathlib import Path
 from collections import defaultdict
+from datetime import datetime
 
 def load_framework(yaml_path):
-    """Load and parse a YAML framework file."""
+    """Load and parse a YAML framework file.
+    
+    Args:
+        yaml_path: Path to the YAML framework file
+        
+    Returns:
+        dict: Parsed YAML data structure
+        
+    Raises:
+        yaml.YAMLError: If YAML parsing fails
+        FileNotFoundError: If file doesn't exist
+    """
     with open(yaml_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 def generate_framework_summary(base_dir):
-    """Generate markdown summary of all frameworks."""
+    """Generate markdown summary of all frameworks.
+    
+    Args:
+        base_dir: Base directory path containing frameworks subdirectory
+        
+    Returns:
+        str: Formatted markdown documentation
+    """
     frameworks_dir = Path(base_dir) / 'frameworks'
     
     # Organize by category
@@ -47,7 +66,7 @@ def generate_framework_summary(base_dir):
     md_lines = [
         "# Framework Quick Reference\n",
         "_Auto-generated documentation from YAML metadata_\n",
-        f"**Last Updated**: {Path(__file__).stat().st_mtime}\n",
+        f"**Last Updated**: {datetime.fromtimestamp(Path(__file__).stat().st_mtime).isoformat()}\n",
         "---\n\n"
     ]
     
@@ -76,7 +95,14 @@ def generate_framework_summary(base_dir):
     return ''.join(md_lines)
 
 def generate_comparison_table(base_dir):
-    """Generate a comparison table of all frameworks."""
+    """Generate a comparison table of all frameworks.
+    
+    Args:
+        base_dir: Base directory path containing frameworks subdirectory
+        
+    Returns:
+        str: Markdown-formatted comparison table
+    """
     frameworks_dir = Path(base_dir) / 'frameworks'
     
     frameworks = []
@@ -89,7 +115,8 @@ def generate_comparison_table(base_dir):
                 'version': data.get('version', ''),
                 'chars': data.get('documentation', {}).get('character_count', '?'),
             })
-        except:
+        except (yaml.YAMLError, FileNotFoundError, KeyError) as e:
+            print(f"Warning: Could not process {yaml_file}: {e}")
             continue
     
     # Sort by category then name
@@ -107,7 +134,11 @@ def generate_comparison_table(base_dir):
     return ''.join(md_lines)
 
 def main():
-    """Generate all documentation."""
+    """Generate all documentation.
+    
+    Returns:
+        int: Exit code (0 for success)
+    """
     import sys
     
     base_dir = Path(__file__).parent.parent
