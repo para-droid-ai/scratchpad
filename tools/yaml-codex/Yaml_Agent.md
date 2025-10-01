@@ -1,4 +1,4 @@
-# The Unified YAML Codex — Warp-Agent Edition
+# The Unified YAML Codex — Agent Edition
 
 This manual distills and unifies your uploaded YAML guides into a single, strict, security-first reference for **automated generation**. The rules are written for machines: explicit, testable, and unfussy.
 
@@ -64,7 +64,7 @@ This manual distills and unifies your uploaded YAML guides into a single, strict
 - **Dangling indentation / mixed tabs:** Normalize to 2-space; convert tabs to spaces.
 - **NBSP (U+00A0) contamination:** Replace with regular spaces.
 
-## 9. Warp-Agent Generation Heuristics
+## 9. Agent Generation Heuristics
 - Start every file with `---`.
 - Default to double-quoted strings; escape inner quotes.
 - For large prompt content, use `|+` literal blocks.
