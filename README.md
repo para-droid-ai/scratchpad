@@ -1,14 +1,14 @@
 # The Scratchpad Framework
 
-**Advanced AI Reasoning Templates for Comet Browser & Beyond**
+**Advanced AI Reasoning Templates for Comet Browser**
 
 ---
 
-## 🎯 Overview
+## Overview
 
 The Scratchpad Framework is a curated collection of **AI reasoning templates** designed to transform how AI assistants think and respond. All frameworks are in clean YAML format, optimized for Comet Browser's character limits.
 
-## 📚 Repository Structure
+## Repository Structure
 
 ```
 scratchpad/
@@ -24,14 +24,13 @@ scratchpad/
 └── license.txt           # MIT License
 ```
 
-## 🚀 Quick Start
-
+## Quick Start
 1. Choose a framework from `frameworks/` directory
 2. Copy the YAML content
 3. Use as system prompt in Comet Browser AI assistant
 4. Enjoy structured, transparent AI reasoning!
 
-## 📖 Framework Categories
+## Framework Categories
 
 ### Core Frameworks (10)
 - `scratchpad-lite.yml` - Lightweight, 3-step reasoning
@@ -52,25 +51,21 @@ scratchpad/
 - `gilfoyle-bot.yml` - Systems architecture expertise (cynical tone)
 - `anton-bot.yml` - Browser automation specialist
 
-## 🔬 Technical Details
-
+## Technical Details
 - **Format:** YAML (machine-parsable, human-readable)
 - **Optimization:** Comet Browser character limit friendly
 - **Validation:** 100% YAML syntax passing
 - **Testing:** Comprehensive test suite included
 
-## 🧪 Testing
-
+## Testing
 ```bash
 python3 tests/test_yaml_frameworks.py
 ```
 
-## 📜 License
-
+## License
 MIT License - Free for commercial and personal use.
 
-## 🌟 Project Stats
-
+## Project Overview
 - **30 frameworks** (10 core, 18 purpose-built, 2 personas)
 - **70% file reduction** (240 → 73 files)
 - **19% size reduction** (149MB → 121MB)
