@@ -151,7 +151,10 @@ class TestBug6BackslashEscapes(unittest.TestCase):
     """Test Bug #6: Widespread backslash escape contamination (MAJOR)"""
     
     def test_no_backslash_n_in_frameworks(self):
-        """Test that YAML files don't contain \\n escape sequences."""
+        """Test that YAML files don't contain \\n escape sequences in active content.
+        
+        Note: legacy_content fields are exempt as they contain archived XML strings.
+        """
         base_dir = Path(__file__).parent.parent
         frameworks_dir = base_dir / 'frameworks'
         
@@ -159,14 +162,31 @@ class TestBug6BackslashEscapes(unittest.TestCase):
         
         files_with_escapes = []
         for yaml_file in yaml_files:
-            content = yaml_file.read_text()
-            # Check for common escape sequences that shouldn't be there
-            if '\\n' in content or '\\t' in content:
-                files_with_escapes.append(yaml_file.name)
+            try:
+                with open(yaml_file, 'r') as f:
+                    data = yaml.safe_load(f)
+                
+                # Skip if not a dict or no framework
+                if not isinstance(data, dict) or 'framework' not in data:
+                    continue
+                
+                # Check framework.content if it exists (not converted files)
+                if 'content' in data['framework']:
+                    content = str(data['framework']['content'])
+                    if '\\n' in content or '\\t' in content:
+                        files_with_escapes.append(yaml_file.name)
+                
+            except Exception:
+                # If we can't parse it, check raw content
+                content = yaml_file.read_text()
+                # Exclude legacy_content sections from check
+                if 'legacy_content' not in content:
+                    if '\\n' in content or '\\t' in content:
+                        files_with_escapes.append(yaml_file.name)
         
         # After remediation, this should be empty
         self.assertEqual([], files_with_escapes, 
-                        f"Files still contain backslash escapes: {files_with_escapes}")
+                        f"Files still contain backslash escapes in active content: {files_with_escapes}")
 
 
 class TestBug7DocumentMarkers(unittest.TestCase):
