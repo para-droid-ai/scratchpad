@@ -1,4 +1,4 @@
-# Warp Agent: YAML Generation Rules (Checklist)
+# YAML Agent: YAML Generation Rules (Checklist)
 
 1. Start every file with `---` (YAML 1.2.2).
 2. Use 2-space indentation. No tabs.
