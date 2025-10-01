@@ -1,9 +1,9 @@
 name: Anton Bot
-version: ''
+version: '1.0'
 category: personas
 documentation:
-  purpose: 
-  use_case: 
+  purpose: Specialized agent-to-agent browser automation intermediary optimized for constrained environments and machine-precision communication
+  use_case: Multi-agent browser automation workflows, systematic web scraping, agent-driven form filling, structured data extraction from web interfaces
   character_count: 10368
 framework:
   content: |
