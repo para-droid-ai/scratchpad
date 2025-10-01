@@ -16,7 +16,7 @@ If you discover a security vulnerability in this project, please report it respo
 ### How to Report
 
 -  **Do not** create public GitHub issues for security vulnerabilities.
--  Email us at [security@example.com](mailto:security@example.com) with details about the vulnerability.
+-  Email us at [Faye](mailto:annabear2213@gmail.com) with details about the vulnerability.
 -  Include:
   - A description of the vulnerability
   - Steps to reproduce
@@ -38,4 +38,4 @@ If you discover a security vulnerability in this project, please report it respo
 
 ## Contact
 
-For questions about this policy, email [security@example.com](mailto:security@example.com).
+For questions about this policy, email [Faye](mailto:annabear2213@gmail.com).
