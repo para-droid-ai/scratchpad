@@ -1,34 +1,120 @@
 name: CI
 permissions:
   contents: read
+
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  lint_and_security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12 (tools)
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+            pyproject.toml
+            setup.cfg
+            setup.py
+
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff yamllint pip-audit
+
+      - name: Ruff lint
+        run: ruff check .
+
+      - name: YAML lint
+        run: |
+          yamllint -s . --exclude venv --exclude .venv --exclude node_modules
+
+      - name: pip-audit (vuln scan)
+        run: |
+          if [ -f requirements-dev.txt ]; then
+            pip-audit -r requirements-dev.txt || true
+          elif [ -f requirements.txt ]; then
+            pip-audit -r requirements.txt || true
+          else
+            pip-audit || true
+          fi
+        # Keep CI green for now; flip to hard fail later by removing `|| true`
+
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: [lint_and_security]
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    env:
+      PYTHONUNBUFFERED: "1"
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+            pyproject.toml
+            setup.cfg
+            setup.py
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest pyyaml
+      - name: Install deps (tests + quality)
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          pip install pytest pyyaml coverage pytest-cov
 
-    - name: Run YAML tests
-      run: |
-        python tests/test_yaml_frameworks.py
-    
-    - name: Run bug fix tests
-      run: |
-        python tests/test_bug_fixes.py
-        name: CI
+      - name: Run tests with coverage (JUnit + threshold)
+        run: |
+          pytest -v \
+            --junitxml=pytest-junit.xml \
+            --cov=. --cov-report=xml:coverage.xml --cov-report=term-missing \
+            --cov-fail-under=80
+
+      - name: Upload coverage.xml
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.python-version }}
+          path: coverage.xml
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload JUnit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-${{ matrix.python-version }}
+          path: pytest-junit.xml
+          if-no-files-found: error
+          retention-days: 7
