@@ -1,5 +1,10 @@
 # The Scratchpad Framework
 
+![Tests](https://img.shields.io/badge/tests-15/15_passing-brightgreen)
+![Bugs](https://img.shields.io/badge/bugs-0_known-brightgreen)
+![YAML](https://img.shields.io/badge/YAML-1.2.2_compliant-blue)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 **Advanced AI Reasoning Templates for Comet Browser**
 
 ---
