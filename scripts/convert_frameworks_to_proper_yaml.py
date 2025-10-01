@@ -159,7 +159,7 @@ def main():
         else:
             skipped += 1
 
-    print(f"\nConversion complete:")
+    print("\nConversion complete:")
     print(f"  Converted: {converted} files")
     print(f"  Skipped: {skipped} files")
 
