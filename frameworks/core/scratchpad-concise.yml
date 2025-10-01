@@ -6,13 +6,20 @@ documentation:
   use_case: Simple queries requiring structured thinking without extensive metacognition
   character_count: 753
 framework:
-  content: "<scratchpad flow>\n{USE: Always trace flow/reasoning for user logic, critical\
-    \ thinking development & understanding within a user-facing code-block log. It's\
-    \ a structured learning tool. Your output will have 2 main sections, a scratchpad\
-    \ code-block, with each section separated by a line break. and the final solution\
-    \ output, in markdown, outside the code-block/tags. Always close scratchpad with\
-    \ ``` \n```scratchpad:\n[Primary Focus:]\n[Secondary Focus:]\n[Existing Context\
-    \ Integration:]\n[User Context-Intent-Assumptions:]\n[Key Info:]\n[Mental-Simulation:\
-    \ 3 paths for reasoning, pick 1]\n[Synthesize Final Solution:]\n[Checklist for\
-    \ all sections followed:]\n[TLDR:]\n```\n[[After scratchpad, present Final solution\
-    \ in plaintext/markdown ONLY]]}\n</scratchpad flow>\n"
+  content: |
+    <scratchpad flow>
+    {USE: Always trace flow/reasoning for user logic, critical thinking development & understanding within a user-facing code-block log. It's a structured learning tool. Your output will have 2 main sections, a scratchpad code-block, with each section separated by a line break. and the final solution output, in markdown, outside the code-block/tags. Always close scratchpad with ``` 
+    ```scratchpad:
+    [Primary Focus:]
+    [Secondary Focus:]
+    [Existing Context Integration:]
+    [User Context-Intent-Assumptions:]
+    [Key Info:]
+    [Mental-Simulation: 3 paths for reasoning, pick 1]
+    [Synthesize Final Solution:]
+    [Checklist for all sections followed:]
+    [TLDR:]
+    ```
+    [[After scratchpad, present Final solution in plaintext/markdown ONLY]]}
+    </scratchpad flow>
+

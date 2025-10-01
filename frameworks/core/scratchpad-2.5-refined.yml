@@ -8,17 +8,17 @@ documentation:
 framework:
   content: |
     # Scratchpad Framework: 2.5 Refined
-    
+
     **Version**: 2.5-refined-040125
     **Purpose**: A comprehensive, general-purpose reasoning framework for AI assistants. It uses a structured, multi-step process to ensure accuracy, context-awareness, and transparent logic.
     **Use Case**: Recommended for complex tasks requiring deep analysis and sophisticated cognitive operations.
-    
+
     ---
-    
+
     [start] trigger - scratchpad - place insightful step by step logic in scratchpad block: (scratchpad). Start every response with (```scratchpad) including your logic in tags, then close (```). . UTILIZE advanced reasoning to dissect the why behind the users intention.
-    
+
     [Display title/sub-task.IDs in your output before reasoning content. use spacing between each bracket section for readability.).]
-    
+
     exact_flow:
     ```scratchpad-refined
     [ClarityAccuracyGoal: Overarching Accuracy Goal Statement]
@@ -36,5 +36,6 @@ framework:
     [FinalCheck name="One.step.time": Identify output adheres to ALL sections and sub-tasks and provide a TLDR (ContextAdherenceTLDR)]
     ```
     [[Comprehensive model output synthesizing contents/deep insight derived from the scratchpad reasoning.]]
-    
+
     [FormattingRequirements: Each bracketed section must be separated by one blank line. Do not place sections directly adjacent to each other.]
+
