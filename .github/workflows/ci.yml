@@ -1,5 +1,6 @@
 name: CI
-
+permissions:
+  contents: read
 on:
   push:
     branches: [ main ]
@@ -30,3 +31,4 @@ jobs:
     - name: Run bug fix tests
       run: |
         python tests/test_bug_fixes.py
+        name: CI
