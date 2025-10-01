@@ -42,7 +42,7 @@ jobs:
 
       - name: YAML lint
         run: |
-          yamllint -s .
+          yamllint .
 
       - name: pip-audit (vuln scan)
         run: |
