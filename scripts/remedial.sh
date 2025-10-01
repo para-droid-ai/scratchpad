@@ -26,8 +26,8 @@
 #   1 - General error
 #   2 - Missing required dependencies
 #
-# AUTHOR: Jules' Remedial Framework
-# VERSION: 1.0
+# AUTHOR: Faye Håkansdotter
+# VERSION: 2.0
 #
 
 # Set strict error handling
