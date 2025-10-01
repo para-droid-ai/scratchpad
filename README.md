@@ -1,4 +1,5 @@
 # The Scratchpad Framework
+<img width="1536" height="1024" alt="483854870-514bd1e1-6ef5-4403-8d0a-441881c5217e" src="https://github.com/user-attachments/assets/d1032a2e-d001-4be8-b57f-803e82218dea" />
 
 ![Tests](https://img.shields.io/badge/tests-15/15_passing-brightgreen)
 ![Bugs](https://img.shields.io/badge/bugs-0_known-brightgreen)
@@ -77,5 +78,11 @@ MIT License - Free for commercial and personal use.
 - **100% YAML validation** passing
 
 ---
+
+## Credits and Mentions 
+- Orignal repo and author: https://github.com/para-droid-ai/scratchpad
+- Discord with information: https://discord.gg/mmbQG63U
+- OP of scratch-Pad: https://github.com/para-droid-ai
+- Fayeblade Repo Author: https://github.com/Fayeblade1488
 
 **Version 3.0 (October 2025)** - Major refactoring and YAML conversion complete.
