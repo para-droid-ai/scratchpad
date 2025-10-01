@@ -9,49 +9,85 @@ to proper YAML structures with nested dictionaries and lists.
 import yaml
 import re
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 
-def parse_xml_content(content: str) -> Dict[str, Any]:
+def clean_text(text: str) -> str:
+    """Clean and normalize text content."""
+    # Remove excessive whitespace
+    text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)
+    # Remove trailing/leading whitespace from each line
+    lines = [line.rstrip() for line in text.split('\n')]
+    return '\n'.join(lines).strip()
+
+
+def parse_scratchpad_sections(content: str) -> List[str]:
+    """Extract scratchpad section names from bracketed format."""
+    pattern = r'\[([^:]+):.*?\]'
+    sections = re.findall(pattern, content)
+    return [s.strip() for s in sections]
+
+
+def parse_xml_to_yaml(content: str) -> Dict[str, Any]:
     """
     Parse XML-like content and convert to YAML structure.
 
-    For frameworks using XML tags like <role>, <scratchpad flow>, <task>,
-    this converts them to proper YAML nested structures.
+    Converts:
+    <role>text</role> -> {"role": "text"}
+    <scratchpad flow>...</scratchpad flow> -> {"scratchpad_flow": {...}}
     """
     result = {}
 
-    # Pattern to match XML-like tags
-    tag_pattern = r'<(\w+[\s\w-]*)>(.*?)</\1>'
+    # Pattern to match XML-like tags (including tags with spaces)
+    tag_pattern = r'<([^/>]+)>(.*?)</\1>'
 
-    matches = re.findall(tag_pattern, content, re.DOTALL)
+    matches = re.findall(tag_pattern, content, re.DOTALL | re.IGNORECASE)
 
     if not matches:
-        # No XML tags found, return as plain content
-        return {"content": content.strip()}
+        # No XML tags found, check for bracketed sections
+        if '[' in content and ']' in content:
+            sections = parse_scratchpad_sections(content)
+            if sections:
+                return {"sections": sections, "raw_format": clean_text(content)}
+        return {"content": clean_text(content)}
 
     for tag_name, tag_content in matches:
-        # Clean tag name (remove extra spaces)
-        clean_tag = tag_name.strip().replace(' ', '_').replace('-', '_')
+        # Clean tag name
+        clean_tag = tag_name.strip().lower()
+        clean_tag = re.sub(r'[\s-]+', '_', clean_tag)
 
-        # Recursively parse nested content
-        nested = parse_xml_content(tag_content.strip())
+        tag_content = tag_content.strip()
 
-        if len(nested) == 1 and "content" in nested:
-            # Simple content, no nesting
-            result[clean_tag] = nested["content"]
-        else:
-            # Has nested structure
+        # Check if content has nested tags
+        if re.search(r'<[^/>]+>.*?</[^>]+>', tag_content, re.DOTALL):
+            # Recursively parse nested content
+            nested = parse_xml_to_yaml(tag_content)
             result[clean_tag] = nested
+        # Check for bracketed sections (scratchpad format)
+        elif '[' in tag_content and ']:' in tag_content:
+            sections = parse_scratchpad_sections(tag_content)
+            # Extract instructions before the template
+            instructions_match = re.search(r'^(.+?)```', tag_content, re.DOTALL)
+            instructions = clean_text(instructions_match.group(1)) if instructions_match else None
 
-    # Handle content outside tags
+            result[clean_tag] = {
+                "format": "bracketed_sections",
+                "sections": sections,
+            }
+            if instructions:
+                result[clean_tag]["usage"] = instructions
+            result[clean_tag]["template"] = clean_text(tag_content)
+        else:
+            # Simple text content
+            result[clean_tag] = clean_text(tag_content)
+
+    # Handle content outside tags (instructions, separators)
     remaining = re.sub(tag_pattern, '', content, flags=re.DOTALL).strip()
-    remaining = re.sub(r'-+', '', remaining).strip()  # Remove separator lines
+    remaining = re.sub(r'-{3,}', '', remaining).strip()  # Remove separator lines
+    remaining = clean_text(remaining)
 
-    if remaining and result:
-        result["additional_content"] = remaining
-    elif remaining and not result:
-        result["content"] = remaining
+    if remaining:
+        result["instructions"] = remaining
 
     return result
 
@@ -68,76 +104,47 @@ def convert_framework(yaml_file: Path) -> bool:
     if not isinstance(data, dict):
         return False
 
-    # Check if framework.content exists and contains XML
+    # Check if framework.content exists
     if 'framework' not in data or 'content' not in data['framework']:
         return False
 
     content = data['framework']['content']
 
-    # Check if content contains XML-like tags
-    if not re.search(r'<\w+[\s\w-]*>', content):
+    # Check if already converted (has 'structure' key)
+    if 'structure' in data['framework']:
+        return False
+
+    # Check if content contains XML-like tags or needs conversion
+    has_xml = re.search(r'<[^/>]+>.*?</[^>]+>', content, re.DOTALL)
+    has_brackets = '[' in content and ']:' in content
+
+    if not (has_xml or has_brackets):
+        # Plain content, no conversion needed
         return False
 
     print(f"Converting: {yaml_file.name}")
 
-    # Parse the XML content
-    parsed_content = parse_xml_content(content)
+    # Parse the content to YAML structure
+    parsed = parse_xml_to_yaml(content)
 
-    # Update the framework structure
-    if len(parsed_content) > 1 or "content" not in parsed_content:
-        # Has structure, use nested YAML
-        data['framework'] = {
-            **data['framework'],
-            'structure': parsed_content
-        }
-        # Keep original as backup
-        data['framework']['original_content'] = content
-    else:
-        # Just plain content, keep as is but use |+ block scalar
-        pass
+    # Update framework with proper YAML structure
+    data['framework']['structure'] = parsed
+    # Keep original for reference
+    data['framework']['legacy_content'] = content
+    # Remove old content key
+    del data['framework']['content']
 
-    # Write back with proper formatting
+    # Write back as proper YAML
     with open(yaml_file, 'w', encoding='utf-8') as f:
-        # Write document start marker
+        # Add document start marker
         f.write('---\n')
-
-        # Write metadata fields
-        for key in ['name', 'version', 'category']:
-            if key in data:
-                value = data[key]
-                if isinstance(value, str):
-                    f.write(f'{key}: "{value}"\n')
-                else:
-                    f.write(f'{key}: {value}\n')
-
-        # Write documentation
-        if 'documentation' in data:
-            f.write('documentation:\n')
-            for doc_key, doc_val in data['documentation'].items():
-                if isinstance(doc_val, str):
-                    f.write(f'  {doc_key}: "{doc_val}"\n')
-                else:
-                    f.write(f'  {doc_key}: {doc_val}\n')
-
-        # Write framework with proper block scalar
-        f.write('framework:\n')
-
-        # If we have structured content
-        if 'structure' in data['framework']:
-            f.write('  structure:\n')
-            # Dump structure as YAML
-            struct_yaml = yaml.dump(data['framework']['structure'],
-                                     default_flow_style=False,
-                                     allow_unicode=True,
-                                     width=120,
-                                     indent=4)
-            for line in struct_yaml.splitlines():
-                f.write(f'    {line}\n')
-
-        # Always keep original content with |+ block scalar
-        f.write('  content: |+\n')
-        for line in content.splitlines():
-            f.write(f'    {line}\n')
+        yaml.dump(data, f,
+                  default_flow_style=False,
+                  allow_unicode=True,
+                  sort_keys=False,
+                  width=120,
+                  indent=2,
+                  explicit_start=False)  # We already wrote ---
 
     return True
 
