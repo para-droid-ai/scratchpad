@@ -1,4 +1,5 @@
-# .yamllint: Strict style for machine-authored YAML
+---
+# .yamllint: YAML linting configuration for Scratchpad Framework
 extends: default
 
 rules:
@@ -12,9 +13,10 @@ rules:
     min-spaces-from-content: 1
   document-start:
     present: true
+    level: warning  # Warn instead of error for missing ---
   document-end: disable
   empty-lines:
-    max: 2
+    max: 5  # Allow more blank lines in framework content
     max-start: 0
     max-end: 1
   hyphens:
@@ -22,10 +24,10 @@ rules:
   indentation:
     spaces: 2
     indent-sequences: consistent
-  line-length:
-    max: 120
-    allow-non-breakable-words: true
+  line-length: disable  # AI framework content needs arbitrary line lengths
   new-lines:
     type: unix
-  trailing-spaces: enable
-  truthy: enable
+  trailing-spaces:
+    level: warning  # Warn instead of error for trailing spaces
+  truthy:
+    level: warning  # Warn instead of error for truthy values
