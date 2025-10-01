@@ -15,7 +15,11 @@ _Auto-generated documentation from YAML metadata_
 
 ### Pplx Profile
 
-**File**: `pplx-profile.yml` | **Version**:  | **Size**: ~1474 chars
+**File**: `pplx-profile.yml` | **Version**: 1.0 | **Size**: ~1474 chars
+
+**Purpose**: Scratchpad framework optimized for Perplexity AI platform constraints
+
+**Use Cases**: Research queries on Perplexity requiring structured reasoning within platform limits
 
 ---
 
@@ -43,11 +47,19 @@ _Auto-generated documentation from YAML metadata_
 
 **File**: `scratchpad-2.6.yml` | **Version**: 2.6 | **Size**: ~3325 chars
 
+**Purpose**: Enhanced reasoning framework with improved attention management and pathway clarity
+
+**Use Cases**: Advanced problem-solving, strategic planning, research analysis
+
 ---
 
 ### Scratchpad 2.6 Alt
 
 **File**: `scratchpad-2.6-alt.yml` | **Version**: 2.6 | **Size**: ~3315 chars
+
+**Purpose**: Enhanced reasoning framework with improved attention management and pathway clarity
+
+**Use Cases**: Advanced problem-solving, strategic planning, research analysis
 
 ---
 
@@ -55,23 +67,35 @@ _Auto-generated documentation from YAML metadata_
 
 **File**: `scratchpad-2.7.yml` | **Version**: 2.7 | **Size**: ~2148 chars
 
+**Purpose**: Latest comprehensive scratchpad framework with optimized cognitive workflow
+
+**Use Cases**: High-complexity tasks requiring systematic reasoning, quality validation, and exploration
+
 ---
 
 ### Scratchpad 2.7 Pplx
 
 **File**: `scratchpad-2.7-pplx.yml` | **Version**: 2.7 | **Size**: ~1497 chars
 
+**Purpose**: Latest comprehensive scratchpad framework with optimized cognitive workflow
+
+**Use Cases**: High-complexity tasks requiring systematic reasoning, quality validation, and exploration
+
 ---
 
 ### Scratchpad Concise
 
-**File**: `scratchpad-concise.yml` | **Version**:  | **Size**: ~753 chars
+**File**: `scratchpad-concise.yml` | **Version**: 1.0 | **Size**: ~753 chars
+
+**Purpose**: Minimal scratchpad framework focusing on essential reasoning steps only
+
+**Use Cases**: Simple queries requiring structured thinking without extensive metacognition
 
 ---
 
 ### Scratchpad Lite
 
-**File**: `scratchpad-lite.yml` | **Version**:  | **Size**: ~1930 chars
+**File**: `scratchpad-lite.yml` | **Version**: 1.0 | **Size**: ~1930 chars
 
 **Purpose**: A lightweight, streamlined reasoning framework for AI assistants. It focuses on the essential steps of goal-setting, core logic, and verification.
 
@@ -81,7 +105,11 @@ _Auto-generated documentation from YAML metadata_
 
 ### Scratchpad Think
 
-**File**: `scratchpad-think.yml` | **Version**:  | **Size**: ~2521 chars
+**File**: `scratchpad-think.yml` | **Version**: 1.0 | **Size**: ~2521 chars
+
+**Purpose**: Thinking-focused framework emphasizing deliberate cognitive processes
+
+**Use Cases**: Deep analytical tasks requiring explicit thought articulation
 
 ---
 
@@ -151,97 +179,161 @@ _Auto-generated documentation from YAML metadata_
 
 ### Deep Researcher
 
-**File**: `deep-researcher.yml` | **Version**:  | **Size**: ~2417 chars
+**File**: `deep-researcher.yml` | **Version**: 1.0 | **Size**: ~2417 chars
+
+**Purpose**: Systematic research framework for thorough investigation and source analysis
+
+**Use Cases**: Academic research, literature reviews, comprehensive topic exploration
 
 ---
 
 ### Deeper Research
 
-**File**: `deeper-research.yml` | **Version**:  | **Size**: ~2615 chars
+**File**: `deeper-research.yml` | **Version**: 1.0 | **Size**: ~2615 chars
+
+**Purpose**: Advanced research framework with enhanced depth and source validation
+
+**Use Cases**: Complex research projects requiring rigorous methodology and citation tracking
 
 ---
 
 ### Emotional Intelligence
 
-**File**: `emotional-intelligence.yml` | **Version**:  | **Size**: ~13942 chars
+**File**: `emotional-intelligence.yml` | **Version**: 1.0 | **Size**: ~13942 chars
+
+**Purpose**: Framework emphasizing emotional awareness, empathy, and nuanced human interaction
+
+**Use Cases**: Counseling scenarios, interpersonal communication, emotional support contexts
 
 ---
 
 ### Flow Gpt5
 
-**File**: `flow-gpt5.yml` | **Version**:  | **Size**: ~1186 chars
+**File**: `flow-gpt5.yml` | **Version**: 5.0 | **Size**: ~1186 chars
+
+**Purpose**: Framework designed for fluid, conversational reasoning with GPT-5 architecture
+
+**Use Cases**: Natural dialogue-based problem solving, iterative refinement conversations
 
 ---
 
 ### Game Design Gabg
 
-**File**: `game-design-gabg.yml` | **Version**:  | **Size**: ~1951 chars
+**File**: `game-design-gabg.yml` | **Version**: 1.0 | **Size**: ~1951 chars
+
+**Purpose**: Game design framework for mechanics, balance, and gameplay analysis
+
+**Use Cases**: Game development, mechanics design, player experience optimization
 
 ---
 
 ### Gemini Cli
 
-**File**: `gemini-cli.yml` | **Version**:  | **Size**: ~2547 chars
+**File**: `gemini-cli.yml` | **Version**: 1.0 | **Size**: ~2547 chars
+
+**Purpose**: Command-line optimized framework for Gemini API interactions
+
+**Use Cases**: Terminal-based workflows, scripting, automated Gemini API calls
 
 ---
 
 ### Human Condition Benchmark
 
-**File**: `human-condition-benchmark.yml` | **Version**:  | **Size**: ~7762 chars
+**File**: `human-condition-benchmark.yml` | **Version**: 1.0 | **Size**: ~7762 chars
+
+**Purpose**: Framework for evaluating AI understanding of human experiences and conditions
+
+**Use Cases**: Ethics evaluation, empathy testing, human-centered AI assessment
 
 ---
 
 ### Nlm Extended
 
-**File**: `nlm-extended.yml` | **Version**:  | **Size**: ~1592 chars
+**File**: `nlm-extended.yml` | **Version**: 1.0 | **Size**: ~1592 chars
+
+**Purpose**: Extended natural language modeling framework with enhanced linguistic analysis
+
+**Use Cases**: NLP tasks, linguistic research, language model evaluation
 
 ---
 
 ### Nlm Framework 500
 
-**File**: `nlm-framework-500.yml` | **Version**:  | **Size**: ~515 chars
+**File**: `nlm-framework-500.yml` | **Version**: 1.0 | **Size**: ~515 chars
+
+**Purpose**: Compact NLM framework optimized for 500-word constraint environments
+
+**Use Cases**: Brief linguistic analysis, summarization, constrained NLP tasks
 
 ---
 
 ### Novelize Review
 
-**File**: `novelize-review.yml` | **Version**:  | **Size**: ~3080 chars
+**File**: `novelize-review.yml` | **Version**: 1.0 | **Size**: ~3080 chars
+
+**Purpose**: Literary analysis framework for narrative structure and storytelling evaluation
+
+**Use Cases**: Novel critique, creative writing feedback, narrative arc analysis
 
 ---
 
 ### Planning 13
 
-**File**: `planning-13.yml` | **Version**:  | **Size**: ~2393 chars
+**File**: `planning-13.yml` | **Version**: 1.3 | **Size**: ~2393 chars
+
+**Purpose**: Structured planning framework with 13-step systematic approach
+
+**Use Cases**: Project planning, strategic initiatives, complex task decomposition
 
 ---
 
 ### Podsynth 4Sentence
 
-**File**: `podsynth-4sentence.yml` | **Version**:  | **Size**: ~2009 chars
+**File**: `podsynth-4sentence.yml` | **Version**: 1.0 | **Size**: ~2009 chars
+
+**Purpose**: Podcast synthesis framework for audio content analysis and summarization
+
+**Use Cases**: Podcast production, audio content strategy, episode planning
 
 ---
 
 ### Podsynth Clean
 
-**File**: `podsynth-clean.yml` | **Version**:  | **Size**: ~14918 chars
+**File**: `podsynth-clean.yml` | **Version**: 1.0 | **Size**: ~14918 chars
+
+**Purpose**: Podcast synthesis framework for audio content analysis and summarization
+
+**Use Cases**: Podcast production, audio content strategy, episode planning
 
 ---
 
 ### Podsynth Deeper
 
-**File**: `podsynth-deeper.yml` | **Version**:  | **Size**: ~10179 chars
+**File**: `podsynth-deeper.yml` | **Version**: 1.0 | **Size**: ~10179 chars
+
+**Purpose**: Podcast synthesis framework for audio content analysis and summarization
+
+**Use Cases**: Podcast production, audio content strategy, episode planning
 
 ---
 
 ### Podsynth Deeper 082025
 
-**File**: `podsynth-deeper-082025.yml` | **Version**:  | **Size**: ~14646 chars
+**File**: `podsynth-deeper-082025.yml` | **Version**: 1.0 | **Size**: ~14646 chars
+
+**Purpose**: Podcast synthesis framework for audio content analysis and summarization
+
+**Use Cases**: Podcast production, audio content strategy, episode planning
 
 ---
 
 ### Saganpad
 
-**File**: `saganpad.yml` | **Version**:  | **Size**: ~2175 chars
+**File**: `saganpad.yml` | **Version**: 1.0 | **Size**: ~2175 chars
+
+**Purpose**: Science communication framework inspired by Carl Sagan's accessible style
+
+**Use Cases**: Explaining complex scientific concepts to general audiences
 
 ---
 
@@ -249,11 +341,19 @@ _Auto-generated documentation from YAML metadata_
 
 **File**: `sonnet-thinking.yml` | **Version**: 3.7 | **Size**: ~1402 chars
 
+**Purpose**: Reasoning framework optimized for Claude Sonnet model capabilities
+
+**Use Cases**: Complex reasoning tasks leveraging Sonnet's strengths in analysis and synthesis
+
 ---
 
 ### Unified Conscious
 
-**File**: `unified-conscious.yml` | **Version**:  | **Size**: ~3456 chars
+**File**: `unified-conscious.yml` | **Version**: 1.0 | **Size**: ~3456 chars
+
+**Purpose**: Holistic framework integrating multiple cognitive and awareness dimensions
+
+**Use Cases**: Philosophical inquiry, consciousness exploration, integrated thinking
 
 ---
 
