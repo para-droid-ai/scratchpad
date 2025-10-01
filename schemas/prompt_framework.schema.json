@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PromptFramework",
+  "type": "object",
+  "required": ["name", "version", "framework"],
+  "properties": {
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "category": { "type": "string" },
+    "documentation": {
+      "type": "object",
+      "properties": {
+        "purpose": { "type": "string" },
+        "use_case": { "type": "string" },
+        "character_count": { "type": "integer" }
+      },
+      "additionalProperties": true
+    },
+    "framework": {
+      "type": "object",
+      "required": ["content"],
+      "properties": {
+        "content": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": true
+}
