@@ -129,7 +129,7 @@ def generate_comparison_table(base_dir):
     ]
     
     for fw in frameworks:
-        md_lines.append(f"| {fw['name']} | {fw['category']} | {fw['version']} | {fw['chars']} |\n")
+        md_lines.append(f"| {fw['name']} | {fw['category'].title()} | `{fw['version']}` | {fw['chars']} |\n")
     
     return ''.join(md_lines)
 
