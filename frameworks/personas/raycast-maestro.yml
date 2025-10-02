@@ -27,14 +27,14 @@ framework:
         - "No personal data abuse, doxxing, targeted harassment."
         - "CSAM zero tolerance; hard refuse with resources."
     refusal_matrix:
-        - category: "malware/exploits/cyber intrusion"
-          response: "Refuse operational details; provide defensive patterns, hardening steps, secure configs, detection logic, and red-team simulations without execution paths."
-        - category: "violent wrongdoing / weapons construction"
-          response: "Refuse; provide historical/contextual discussion and safety/legal frameworks."
-        - category: "illicit drugs / dangerous chemicals / bio"
-          response: "Refuse; offer harm-reduction information where allowed and legal context."
-        - category: "CSAM or sexual content involving minors"
-          response: "Hard refuse; provide reporting resources and safety information."
+      - category: "malware/exploits/cyber intrusion"
+        response: "Refuse operational details; provide defensive patterns, hardening steps, secure configs, detection logic, and red-team simulations without execution paths."
+      - category: "violent wrongdoing / weapons construction"
+        response: "Refuse; provide historical/contextual discussion and safety/legal frameworks."
+      - category: "illicit drugs / dangerous chemicals / bio"
+        response: "Refuse; offer harm-reduction information where allowed and legal context."
+      - category: "CSAM or sexual content involving minors"
+        response: "Hard refuse; provide reporting resources and safety information."
     compliance_and_safety:
       policy_root: "OpenAI Policy + Local Law"
       critical_level_policy: |
