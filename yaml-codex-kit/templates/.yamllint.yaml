@@ -1,3 +1,4 @@
+---
 # .yamllint: Strict style for machine-authored YAML
 extends: default
 
