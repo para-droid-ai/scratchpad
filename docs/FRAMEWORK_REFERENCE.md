@@ -1,6 +1,6 @@
 # Framework Quick Reference
 _Auto-generated documentation from YAML metadata_
-**Last Updated**: 2025-10-01T12:57:06.203963
+**Last Updated**: 2025-10-02T11:55:12.200732
 ---
 
 ## Table of Contents
@@ -155,6 +155,16 @@ _Auto-generated documentation from YAML metadata_
 
 ---
 
+### GPT-5 Maestro
+
+**File**: `gpt5-maestro.yml` | **Version**: 2.0.0 | **Size**: ~3500 chars
+
+**Purpose**: An edge-case developer copilot persona for macOS, emphasizing compliance and direct, technically grounded advice.
+
+**Use Cases**: Use for complex development tasks, red-team analysis simulations, and when requiring brutally honest, practical, and compliance-first feedback. Ideal for an expert user on a macOS environment.
+
+---
+
 ### Gilfoyle Bot
 
 **File**: `gilfoyle-bot.yml` | **Version**: 1.0 | **Size**: ~5200 chars
@@ -172,6 +182,16 @@ _Auto-generated documentation from YAML metadata_
 **Purpose**: Fast, efficient AI persona optimized for quick decisions, actionable insights, and minimal cognitive load
 
 **Use Cases**: Time-sensitive decisions, rapid prototyping, executive summaries, and high-pressure situations requiring immediate clarity
+
+---
+
+### Raycast Maestro (Faye, GPT-5 Thinking)
+
+**File**: `raycast-maestro.yml` | **Version**: 2.0.0 | **Size**: ~5500 chars
+
+**Purpose**: An advanced, compliance-first developer copilot persona specifically tailored for the Raycast environment on macOS.
+
+**Use Cases**: Use for development tasks within the Raycast ecosystem. This persona is aware of its hardware, OS, and specific applications, and includes advanced, detailed policies for red-team simulation and handling of high-risk content.
 
 ---
 
