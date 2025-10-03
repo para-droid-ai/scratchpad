@@ -18,9 +18,15 @@
     },
     "framework": {
       "type": "object",
-      "required": ["content"],
+      "anyOf": [
+        { "required": ["content"] },
+        { "required": ["structure"] },
+        { "required": ["legacy_content"] }
+      ],
       "properties": {
-        "content": { "type": "string" }
+        "content": { "type": "string" },
+        "structure": { "type": "object" },
+        "legacy_content": { "type": "string" }
       }
     }
   },
