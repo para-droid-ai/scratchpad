@@ -65,7 +65,7 @@ def refactor_framework_file(filepath):
 
     # Write the updated data back to the file
     with open(filepath, 'w') as f:
-        yaml.dump(data, f, default_flow_style=False, sort_keys=False, indent=2)
+        yaml.dump(data, f, default_flow_style=False, sort_keys=False, indent=2, explicit_start=True)
 
     print(f"Refactored {filepath}")
 
