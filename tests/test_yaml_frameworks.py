@@ -38,7 +38,7 @@ def test_yaml_syntax():
             failed += 1
     
     print(f"\nYAML Syntax: {passed} passed, {failed} failed")
-    return failed == 0
+    assert failed == 0
 
 
 def test_required_keys():
