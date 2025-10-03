@@ -13,7 +13,14 @@ from pathlib import Path
 import re
 
 def test_yaml_syntax():
-    """Test that all YAML files have valid syntax."""
+    """Test that all YAML files have valid syntax.
+    
+    This test validates that all YAML framework files in the frameworks/
+    directory can be successfully parsed by PyYAML's safe_load function.
+    
+    Raises:
+        AssertionError: If any YAML files fail to parse
+    """
     base_dir = Path(__file__).parent.parent
     frameworks_dir = base_dir / 'frameworks'
     
@@ -42,7 +49,17 @@ def test_yaml_syntax():
 
 
 def test_required_keys():
-    """Test that all frameworks have required keys."""
+    """Test that all frameworks have required keys.
+    
+    Validates that every framework YAML file contains the mandatory keys:
+    - name: Framework name identifier
+    - category: Framework category/type
+    - documentation: Documentation metadata
+    - framework: Main framework content structure
+    
+    Raises:
+        AssertionError: If any frameworks are missing required keys
+    """
     base_dir = Path(__file__).parent.parent
     frameworks_dir = base_dir / 'frameworks'
     
@@ -73,11 +90,22 @@ def test_required_keys():
             failed += 1
     
     print(f"Required Keys: {passed} passed, {failed} failed")
-    return failed == 0
+    assert failed == 0
 
 
 def test_framework_categories():
-    """Test that frameworks are in correct directories."""
+    """Test that frameworks are in correct directories.
+    
+    Verifies the repository structure contains the expected framework categories:
+    - core: General-purpose reasoning templates (minimum 5 expected)
+    - purpose-built: Task-specific frameworks
+    - personas: AI assistant personality frameworks (minimum 2 expected)
+    
+    Ensures a minimum total of 20 frameworks across all categories.
+    
+    Raises:
+        AssertionError: If total framework count is below 20
+    """
     base_dir = Path(__file__).parent.parent
     frameworks_dir = base_dir / 'frameworks'
     
@@ -100,11 +128,23 @@ def test_framework_categories():
     total = sum(len(files) for files in categories.values())
     print(f"\nTotal: {total} frameworks")
     
-    return total >= 20  # Expect at least 20 frameworks
+    assert total >= 20  # Expect at least 20 frameworks
 
 
 def test_metadata_quality():
-    """Test quality and consistency of framework metadata."""
+    """Test quality and consistency of framework metadata.
+    
+    Validates metadata quality including:
+    - Purpose field: Should be concise (< 30 words recommended)
+    - Use case field: Should be descriptive (< 40 words recommended)
+    - Version field: Must be present and non-empty
+    - Content field: Must be substantial (> 100 characters)
+    
+    Issues warnings for quality concerns but allows some flexibility.
+    
+    Raises:
+        AssertionError: If more than 10 quality warnings are detected
+    """
     base_dir = Path(__file__).parent.parent
     frameworks_dir = base_dir / 'frameworks'
     
@@ -158,11 +198,22 @@ def test_metadata_quality():
             print(warning)
     
     print(f"\nMetadata Quality: {passed} files checked, {len(warnings)} warnings")
-    return len(warnings) < 10  # Allow some warnings but not too many
+    assert len(warnings) < 10  # Allow some warnings but not too many
 
 
 def test_field_types():
-    """Validate that YAML fields have correct data types."""
+    """Validate that YAML fields have correct data types.
+    
+    Ensures type consistency across all framework files:
+    - String fields: name, version, category
+    - Dictionary fields: documentation, framework
+    
+    This prevents data type errors that could cause parsing issues
+    in consuming applications.
+    
+    Raises:
+        AssertionError: If any fields have incorrect data types
+    """
     base_dir = Path(__file__).parent.parent
     frameworks_dir = base_dir / 'frameworks'
     
@@ -202,11 +253,22 @@ def test_field_types():
             failed += 1
     
     print(f"Field Types: {passed} passed, {failed} failed")
-    return failed == 0
+    assert failed == 0
 
 
 def test_content_uniqueness():
-    """Detect highly similar content across frameworks."""
+    """Detect highly similar content across frameworks.
+    
+    Performs a simple similarity check by comparing the first 500 characters
+    of each framework's content field (normalized to lowercase with whitespace
+    collapsed). This helps identify unintentional duplicates or copy-paste errors.
+    
+    Note: This is a basic check that detects exact duplicates. Frameworks may
+    have similar structure while serving different purposes.
+    
+    Raises:
+        AssertionError: If any frameworks have identical content samples
+    """
     base_dir = Path(__file__).parent.parent
     frameworks_dir = base_dir / 'frameworks'
     
@@ -242,11 +304,25 @@ def test_content_uniqueness():
     else:
         print("No obvious content duplication detected")
     
-    return len(duplicates) == 0
+    assert len(duplicates) == 0
 
 
 def main():
-    """Run all tests."""
+    """Run all tests and provide summary report.
+    
+    Executes the complete test suite for YAML framework validation including:
+    - Syntax validation
+    - Required keys check
+    - Field type validation  
+    - Metadata quality assessment
+    - Content uniqueness check
+    - Category organization verification
+    
+    Provides a detailed summary of test results with pass/fail/warning counts.
+    
+    Returns:
+        int: Exit code (0 for success, 1 for failure)
+    """
     print("="*70)
     print(" YAML Framework Validation Test Suite")
     print(" Enhanced with Semantic & Quality Checks")

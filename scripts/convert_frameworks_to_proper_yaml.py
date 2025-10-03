@@ -13,7 +13,20 @@ from typing import Dict, Any, List
 
 
 def clean_text(text: str) -> str:
-    """Clean and normalize text content."""
+    """Clean and normalize text content.
+    
+    Removes excessive whitespace and normalizes line endings for cleaner
+    YAML output. This includes:
+    - Collapsing multiple blank lines into double newlines
+    - Removing trailing whitespace from each line
+    - Trimming leading/trailing whitespace from the entire text
+    
+    Args:
+        text: The text string to clean and normalize
+        
+    Returns:
+        str: Cleaned and normalized text
+    """
     # Remove excessive whitespace
     text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)
     # Remove trailing/leading whitespace from each line
@@ -22,7 +35,19 @@ def clean_text(text: str) -> str:
 
 
 def parse_scratchpad_sections(content: str) -> List[str]:
-    """Extract scratchpad section names from bracketed format."""
+    """Extract scratchpad section names from bracketed format.
+    
+    Parses content using bracketed scratchpad format like:
+    [Section Name: description]
+    
+    and extracts just the section names.
+    
+    Args:
+        content: String containing bracketed section markers
+        
+    Returns:
+        List[str]: List of section names found in the content
+    """
     pattern = r'\[([^:]+):.*?\]'
     sections = re.findall(pattern, content)
     return [s.strip() for s in sections]
@@ -31,10 +56,24 @@ def parse_scratchpad_sections(content: str) -> List[str]:
 def parse_xml_to_yaml(content: str) -> Dict[str, Any]:
     """
     Parse XML-like content and convert to YAML structure.
-
-    Converts:
-    <role>text</role> -> {"role": "text"}
-    <scratchpad flow>...</scratchpad flow> -> {"scratchpad_flow": {...}}
+    
+    Converts embedded XML-like markup to proper YAML dictionaries and lists.
+    Handles several formats:
+    - Simple tags: <role>text</role> -> {"role": "text"}
+    - Tags with spaces: <scratchpad flow>...</scratchpad flow> -> {"scratchpad_flow": {...}}
+    - Nested tags: Recursively processes nested XML structures
+    - Bracketed sections: [Section: description] format for scratchpad templates
+    
+    The function intelligently detects content types:
+    - Nested XML: Recursively parsed
+    - Bracketed sections: Extracted as section lists
+    - Plain text: Stored as string content
+    
+    Args:
+        content: String containing XML-like markup to parse
+        
+    Returns:
+        Dict[str, Any]: Parsed YAML structure as nested dictionaries and lists
     """
     result = {}
 
@@ -95,8 +134,28 @@ def parse_xml_to_yaml(content: str) -> Dict[str, Any]:
 def convert_framework(yaml_file: Path) -> bool:
     """
     Convert a single framework file to proper YAML structure.
-
-    Returns True if conversion was made, False if no conversion needed.
+    
+    This function checks if a framework file needs conversion from the legacy
+    XML-embedded format to modern structured YAML. It:
+    - Loads the existing YAML file
+    - Checks for framework.content field with XML or bracketed content
+    - Parses the content into structured YAML
+    - Updates the framework with a 'structure' field
+    - Preserves original content in 'legacy_content' for reference
+    - Writes back with proper YAML formatting including document start marker
+    
+    Files that don't need conversion (already converted or no XML content)
+    are skipped without modification.
+    
+    Args:
+        yaml_file: Path object pointing to the framework YAML file
+        
+    Returns:
+        bool: True if conversion was performed, False if file was skipped
+        
+    Raises:
+        yaml.YAMLError: If YAML parsing or dumping fails
+        IOError: If file read/write operations fail
     """
     with open(yaml_file, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
@@ -150,7 +209,20 @@ def convert_framework(yaml_file: Path) -> bool:
 
 
 def main():
-    """Main conversion routine."""
+    """Main conversion routine.
+    
+    Processes all framework YAML files in the frameworks directory,
+    converting them from legacy XML-embedded format to modern structured YAML.
+    
+    The function:
+    - Validates the frameworks directory exists
+    - Recursively finds all .yml files
+    - Converts each file that needs conversion
+    - Provides summary statistics of conversion results
+    
+    Returns:
+        int: Exit code (0 for success, 1 for error)
+    """
     frameworks_dir = Path(__file__).parent.parent / 'frameworks'
 
     if not frameworks_dir.exists():

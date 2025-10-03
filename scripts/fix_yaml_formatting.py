@@ -33,20 +33,45 @@ def fix_yaml_file(yaml_path):
         return False
     
     # Prepare to preserve all original keys and format framework.content as a literal block scalar
-    from yaml.representer import SafeRepresenter
-
-    class LiteralStr(str): pass
+    
+    # Custom string classes for different formatting needs
+    class LiteralStr(str): 
+        """String subclass for literal block scalar style (|)."""
+        pass
+    
+    class QuotedStr(str):
+        """String subclass for double-quoted style."""
+        pass
+    
+    # Configure YAML dumper with custom representers
+    class CustomDumper(yaml.SafeDumper):
+        pass
+    
     def literal_str_representer(dumper, data):
         return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='|')
-    yaml.add_representer(LiteralStr, literal_str_representer)
+    
+    def quoted_str_representer(dumper, data):
+        return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='"')
+    
+    CustomDumper.add_representer(LiteralStr, literal_str_representer)
+    CustomDumper.add_representer(QuotedStr, quoted_str_representer)
 
     # Copy all original data, use safe access, and update only necessary fields
     new_data = dict(data)  # shallow copy preserves unknown keys
-    new_data['name'] = data.get('name', '')
-    new_data['version'] = str(data.get('version', ''))
-    new_data['category'] = data.get('category', '')
-    # Documentation block
-    new_data['documentation'] = data.get('documentation', {})
+    new_data['name'] = QuotedStr(data.get('name', ''))
+    new_data['version'] = QuotedStr(str(data.get('version', '')))
+    new_data['category'] = QuotedStr(data.get('category', ''))
+    
+    # Documentation block - quote string values
+    doc = data.get('documentation', {})
+    new_doc = {}
+    for key, value in doc.items():
+        if isinstance(value, str):
+            new_doc[key] = QuotedStr(value)
+        else:
+            new_doc[key] = value
+    new_data['documentation'] = new_doc
+    
     # Framework block
     framework = data.get('framework', {})
     content = framework.get('content', '')
@@ -56,7 +81,7 @@ def fix_yaml_file(yaml_path):
     new_data['framework'] = framework_new
 
     # Serialize the new YAML content to a string
-    new_yaml_str = yaml.dump(new_data, default_flow_style=False, sort_keys=False, allow_unicode=True)
+    new_yaml_str = yaml.dump(new_data, Dumper=CustomDumper, default_flow_style=False, sort_keys=False, allow_unicode=True)
     # Read the current file content
     with open(yaml_path, 'r', encoding='utf-8') as f:
         current_yaml_str = f.read()
