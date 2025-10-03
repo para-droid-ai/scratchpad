@@ -55,10 +55,17 @@ def fix_yaml_file(yaml_path):
     framework_new['content'] = LiteralStr(content)
     new_data['framework'] = framework_new
 
-    # Write the properly formatted YAML, preserving unknown keys
-    with open(yaml_path, 'w', encoding='utf-8') as f:
-        yaml.dump(new_data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
-    return True
+    # Serialize the new YAML content to a string
+    new_yaml_str = yaml.dump(new_data, default_flow_style=False, sort_keys=False, allow_unicode=True)
+    # Read the current file content
+    with open(yaml_path, 'r', encoding='utf-8') as f:
+        current_yaml_str = f.read()
+    # Only write if the content has changed
+    if current_yaml_str != new_yaml_str:
+        with open(yaml_path, 'w', encoding='utf-8') as f:
+            f.write(new_yaml_str)
+        return True
+    return False
 
 def main():
     """Process all YAML files in the frameworks directory.
