@@ -32,45 +32,32 @@ def fix_yaml_file(yaml_path):
     if not data:
         return False
     
-    # Manually construct the YAML with literal block scalars
-    yaml_lines = []
-    yaml_lines.append(f"name: {data['name']}")
-    
-    # Version might be number or string - quote defensively
-    version = data.get('version', '')
-    if isinstance(version, (int, float)):
-        yaml_lines.append(f"version: \"{version}\"")
-    else:
-        yaml_lines.append(f"version: \"{version}\"")
-    
-    yaml_lines.append(f"category: {data['category']}")
-    yaml_lines.append("documentation:")
-    
-    doc = data.get('documentation', {})
-    if doc.get('purpose'):
-        yaml_lines.append(f"  purpose: {doc['purpose']}")
-    if doc.get('use_case'):
-        yaml_lines.append(f"  use_case: {doc['use_case']}")
-    if doc.get('character_count'):
-        yaml_lines.append(f"  character_count: {doc['character_count']}")
-    if doc.get('operational_guide'):
-        yaml_lines.append(f"  operational_guide: {doc['operational_guide']}")
-    
-    yaml_lines.append("framework:")
-    
-    # Use literal block scalar for content
-    content = data.get('framework', {}).get('content', '')
-    yaml_lines.append("  content: |")
-    
-    # Add content lines with proper indentation
-    for line in content.split('\n'):
-        yaml_lines.append(f"    {line}" if line else "")
-    
-    # Write the properly formatted YAML
+    # Prepare to preserve all original keys and format framework.content as a literal block scalar
+    from yaml.representer import SafeRepresenter
+
+    class LiteralStr(str): pass
+    def literal_str_representer(dumper, data):
+        return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='|')
+    yaml.add_representer(LiteralStr, literal_str_representer)
+
+    # Copy all original data, use safe access, and update only necessary fields
+    new_data = dict(data)  # shallow copy preserves unknown keys
+    new_data['name'] = data.get('name', '')
+    new_data['version'] = str(data.get('version', ''))
+    new_data['category'] = data.get('category', '')
+    # Documentation block
+    new_data['documentation'] = data.get('documentation', {})
+    # Framework block
+    framework = data.get('framework', {})
+    content = framework.get('content', '')
+    # Use custom type for literal block scalar
+    framework_new = dict(framework)
+    framework_new['content'] = LiteralStr(content)
+    new_data['framework'] = framework_new
+
+    # Write the properly formatted YAML, preserving unknown keys
     with open(yaml_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(yaml_lines))
-        f.write('\n')  # Add final newline
-    
+        yaml.dump(new_data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
     return True
 
 def main():
