@@ -43,7 +43,7 @@ def refactor_framework_file(filepath):
         yaml.YAMLError: If the YAML file cannot be parsed or written.
         IOError: If the file cannot be read or written.
     """
-    with open(filepath, 'r') as f:
+    with open(filepath, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
 
     if 'framework' not in data or 'legacy_content' not in data['framework']:
@@ -97,7 +97,7 @@ def refactor_framework_file(filepath):
     data['framework'] = new_framework
 
     # Write the updated data back to the file
-    with open(filepath, 'w') as f:
+    with open(filepath, 'w', encoding='utf-8') as f:
         yaml.dump(data, f, default_flow_style=False, sort_keys=False, indent=2, explicit_start=True)
 
     print(f"Refactored {filepath}")
@@ -118,7 +118,9 @@ def main():
     Returns:
         None
     """
-    frameworks_dir = 'frameworks'
+    from pathlib import Path
+    frameworks_dir = Path('frameworks')
+    
     for root, _, files in os.walk(frameworks_dir):
         for file in files:
             if file.endswith('.yml') or file.endswith('.yaml'):

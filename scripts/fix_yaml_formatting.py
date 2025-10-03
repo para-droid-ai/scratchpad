@@ -25,11 +25,15 @@ def fix_yaml_file(yaml_path):
         yaml.YAMLError: If YAML parsing fails
         IOError: If file operations fail
     """
+    # Read file once and store content to avoid race conditions
     with open(yaml_path, 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
+        original_content = f.read()
     
-    # Guard against None data
-    if not data:
+    # Parse the content
+    data = yaml.safe_load(original_content)
+    
+    # Guard against None data and ensure it's a dictionary
+    if not data or not isinstance(data, dict):
         return False
     
     # Prepare to preserve all original keys and format framework.content as a literal block scalar
@@ -82,11 +86,9 @@ def fix_yaml_file(yaml_path):
 
     # Serialize the new YAML content to a string
     new_yaml_str = yaml.dump(new_data, Dumper=CustomDumper, default_flow_style=False, sort_keys=False, allow_unicode=True)
-    # Read the current file content
-    with open(yaml_path, 'r', encoding='utf-8') as f:
-        current_yaml_str = f.read()
-    # Only write if the content has changed
-    if current_yaml_str != new_yaml_str:
+    
+    # Only write if the content has changed (compare with stored original)
+    if original_content != new_yaml_str:
         with open(yaml_path, 'w', encoding='utf-8') as f:
             f.write(new_yaml_str)
         return True

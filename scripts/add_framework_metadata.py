@@ -145,8 +145,8 @@ def add_metadata_to_framework(yaml_path):
     with open(yaml_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
     
-    # Guard against None data
-    if not data:
+    # Guard against None data and ensure it's a dictionary
+    if not data or not isinstance(data, dict):
         data = {}
     
     # Extract framework base name
