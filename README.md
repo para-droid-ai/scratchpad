@@ -1,10 +1,14 @@
 # The Scratchpad Framework
 <img width="1536" height="1024" alt="483854870-514bd1e1-6ef5-4403-8d0a-441881c5217e" src="https://github.com/user-attachments/assets/d1032a2e-d001-4be8-b57f-803e82218dea" />
 
-![Tests](https://img.shields.io/badge/tests-15/15_passing-brightgreen)
-![Bugs](https://img.shields.io/badge/bugs-0_known-brightgreen)
-![YAML](https://img.shields.io/badge/YAML-1.2.2_compliant-blue)
-![License](https://img.shields.io/badge/license-MIT-blue)
+[![Tests](https://img.shields.io/badge/tests-40%2F40_passing-brightgreen)](https://github.com/Fayeblade1488/scratchpad_fayeblade/actions)
+[![Coverage](https://img.shields.io/badge/coverage-59%25-yellow)](https://github.com/Fayeblade1488/scratchpad_fayeblade)
+[![Bugs](https://img.shields.io/badge/bugs-0_known-brightgreen)](https://github.com/Fayeblade1488/scratchpad_fayeblade/issues)
+[![YAML](https://img.shields.io/badge/YAML-1.2.2_compliant-blue)](https://yaml.org/spec/1.2.2/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](./license.txt)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
 **Advanced AI Reasoning Templates for Comet Browser**
 
@@ -17,17 +21,38 @@ The Scratchpad Framework is a curated collection of **AI reasoning templates** d
 ## Repository Structure
 
 ```
-scratchpad/
-├── frameworks/
-│   ├── core/              # 10 general-purpose reasoning templates
-│   ├── purpose-built/     # 18 task-specific frameworks
-│   └── personas/          # 2 AI assistant personalities
-├── docs/                  # Documentation and guides
-├── scripts/               # Utility scripts
-├── assets/showcase/       # Screenshots and demos
-├── tests/                 # Validation test suite
-├── README.md             # This file
-└── license.txt           # MIT License
+scratchpad_fayeblade/
+├── frameworks/                 # AI reasoning framework templates
+│   ├── core/                  # 10 general-purpose reasoning templates
+│   ├── purpose-built/         # 18 task-specific frameworks
+│   └── personas/              # 8 AI assistant personalities
+├── scripts/                   # Utility and maintenance scripts
+│   ├── add_framework_metadata.py
+│   ├── add_yaml_doc_markers.py
+│   ├── convert_frameworks_to_proper_yaml.py
+│   ├── fix_all_yaml_compliance.py
+│   ├── fix_yaml_formatting.py
+│   ├── generate_framework_docs.py
+│   └── refactor_frameworks.py
+├── tests/                     # Comprehensive test suite (40 tests)
+│   ├── test_yaml_frameworks.py
+│   ├── test_scripts.py
+│   ├── test_bug_fixes.py
+│   └── test_edge_cases.py
+├── docs/                      # Extended documentation
+│   ├── ENHANCEMENT_SUMMARY.md
+│   ├── FRAMEWORK_COMPARISON.md
+│   ├── FRAMEWORK_REFERENCE.md
+│   ├── REMEDIAL_PLAYBOOK.md
+│   └── yaml-audit.md
+├── tools/                     # Development tools
+│   └── yaml-codex/           # YAML validation utilities
+├── schemas/                   # JSON schemas for validation
+├── CODEOWNERS                 # Code ownership definitions
+├── CONTRIBUTING.md            # Contribution guidelines
+├── README.md                  # This file
+├── requirements.txt           # Python dependencies
+└── license.txt               # MIT License
 ```
 
 ## Quick Start

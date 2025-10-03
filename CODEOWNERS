@@ -1,0 +1,29 @@
+# Code Owners for scratchpad_fayeblade Repository
+#
+# These owners will be automatically requested for review when someone
+# opens a pull request that modifies code in the specified paths.
+#
+# More information: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @Fayeblade1488 @para-droid-ai
+
+# Framework YAML files
+/frameworks/ @Fayeblade1488 @para-droid-ai
+
+# Scripts and utilities
+/scripts/ @Fayeblade1488
+/tools/ @Fayeblade1488
+
+# Tests
+/tests/ @Fayeblade1488
+
+# Documentation
+/docs/ @Fayeblade1488 @para-droid-ai
+/README.md @Fayeblade1488 @para-droid-ai
+/CONTRIBUTING.md @Fayeblade1488
+
+# Configuration files
+/.github/ @Fayeblade1488
+/.yamllint.yaml @Fayeblade1488
+/requirements.txt @Fayeblade1488
