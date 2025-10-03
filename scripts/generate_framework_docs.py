@@ -66,7 +66,7 @@ def generate_framework_summary(base_dir):
     md_lines = [
         "# Framework Quick Reference\n",
         "_Auto-generated documentation from YAML metadata_\n",
-        f"**Last Updated**: {datetime.fromtimestamp(Path(__file__).stat().st_mtime).isoformat()}\n",
+        f"**Last Updated**: {datetime.now().isoformat()}\n",
         "---\n\n"
     ]
     
