@@ -15,8 +15,6 @@ import tempfile
 import shutil
 from pathlib import Path
 import yaml
-import os
-from datetime import datetime
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -126,16 +124,10 @@ class TestBugFix7TimestampCorrectness(unittest.TestCase):
         with open(test_file, 'w') as f:
             yaml.dump(test_data, f)
         
-        # Get current time before generation
-        before_time = datetime.now()
-        
         # Generate documentation
         summary = generate_framework_docs.generate_framework_summary(self.test_dir)
         
-        # Get current time after generation
-        after_time = datetime.now()
-        
-        # The timestamp in the summary should be between before and after
+        # The timestamp in the summary should contain ISO format
         # Extract timestamp from summary
         self.assertIn('**Last Updated**:', summary)
         
@@ -179,7 +171,7 @@ class TestBugFix10YAMLStructureValidation(unittest.TestCase):
         
         # Should handle gracefully without crashing
         try:
-            result = add_framework_metadata.add_metadata_to_framework(test_file)
+            add_framework_metadata.add_metadata_to_framework(test_file)
             success = True
         except (AttributeError, TypeError):
             success = False
@@ -194,7 +186,7 @@ class TestBugFix10YAMLStructureValidation(unittest.TestCase):
         
         # Should handle gracefully without crashing
         try:
-            result = add_framework_metadata.add_metadata_to_framework(test_file)
+            add_framework_metadata.add_metadata_to_framework(test_file)
             success = True
         except (AttributeError, TypeError):
             success = False

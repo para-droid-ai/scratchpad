@@ -86,7 +86,7 @@ class TestFixYAMLFormattingEdgeCases(unittest.TestCase):
         with open(test_file, 'w', encoding='utf-8') as f:
             yaml.dump(test_data, f)
         
-        result = fix_yaml_formatting.fix_yaml_file(test_file)
+        fix_yaml_formatting.fix_yaml_file(test_file)
         
         # Should handle Unicode correctly
         content = test_file.read_text(encoding='utf-8')
