@@ -31,10 +31,41 @@ scratchpad/
 ```
 
 ## Quick Start
-1. Choose a framework from `frameworks/` directory
-2. Copy the YAML content
-3. Use as system prompt in Comet Browser AI assistant
-4. Enjoy structured, transparent AI reasoning!
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Fayeblade1488/scratchpad_fayeblade.git
+cd scratchpad_fayeblade
+```
+
+2. **Install dependencies** (for development and testing)
+```bash
+pip install -r requirements.txt
+```
+
+### Using a Framework
+
+1. Browse the `frameworks/` directory to find a suitable template
+2. Copy the YAML content from your chosen framework
+3. Paste it as a system prompt in Comet Browser or your AI assistant
+4. Start chatting and enjoy structured, transparent AI reasoning!
+
+### Example Usage
+
+**Using Scratchpad Lite for quick tasks:**
+```yaml
+# Copy content from frameworks/core/scratchpad-lite.yml
+# Paste into Comet Browser's system prompt field
+# Ask your question - the AI will now use structured reasoning
+```
+
+**For research tasks:**
+```yaml
+# Use frameworks/purpose-built/deep-researcher.yml
+# Perfect for academic research and literature reviews
+```
 
 ## Framework Categories
 
@@ -58,18 +89,147 @@ scratchpad/
 - `anton-bot.yml` - Browser automation specialist
 
 ## Technical Details
-- **Format:** YAML (machine-parsable, human-readable)
-- **Optimization:** Comet Browser character limit friendly
-- **Validation:** 100% YAML syntax passing
-- **Testing:** Comprehensive test suite included
+
+### File Format
+- **Format:** YAML 1.2.2 compliant
+- **Encoding:** UTF-8
+- **Structure:** Nested dictionaries with documented keys
+- **Content Style:** Literal block scalars (`|`) for long content
+
+### Framework Structure
+Each framework YAML file contains:
+```yaml
+name: "Framework Name"
+version: "1.0"
+category: "core|purpose-built|personas"
+documentation:
+  purpose: "Brief description of framework purpose"
+  use_case: "Specific use cases and scenarios"
+  character_count: 1234
+framework:
+  content: |
+    The actual framework prompt content
+    Uses literal block scalar for readability
+```
+
+### Requirements
+- **Python:** 3.8+ (for development/testing)
+- **Dependencies:** PyYAML, pytest, coverage (see requirements.txt)
+- **No runtime dependencies** for using frameworks
+
+### Validation
+- **YAML Syntax:** 100% passing
+- **Test Suite:** 40 tests, all passing
+- **Code Coverage:** 59% for utility scripts
+- **YAML Compliance:** Full YAML 1.2.2 compliance
 
 ## Testing
+
+### Run All Tests
 ```bash
-python3 tests/test_yaml_frameworks.py
+# Run complete test suite
+python -m pytest tests/
+
+# Run with verbose output
+python -m pytest tests/ -v
+
+# Run with coverage report
+python -m coverage run -m pytest tests/
+python -m coverage report
+```
+
+### Run Individual Test Suites
+```bash
+# YAML validation tests
+python -m pytest tests/test_yaml_frameworks.py
+
+# Script functionality tests
+python -m pytest tests/test_scripts.py
+
+# Bug fix validation tests
+python -m pytest tests/test_bug_fixes.py
+
+# Edge case tests
+python -m pytest tests/test_edge_cases.py
+```
+
+### Test Coverage
+Current test coverage: **59%** for scripts, **40 tests passing**
+
+Coverage includes:
+- YAML syntax validation
+- Framework structure verification
+- Script functionality testing
+- Edge case handling
+- Error recovery paths
+
+## Development
+
+### Repository Scripts
+
+The `scripts/` directory contains utility tools for framework maintenance:
+
+- `fix_yaml_formatting.py` - Ensures proper YAML formatting with literal block scalars
+- `add_framework_metadata.py` - Adds or updates framework metadata
+- `generate_framework_docs.py` - Auto-generates markdown documentation
+- `refactor_frameworks.py` - Converts legacy XML format to modern YAML
+- `convert_frameworks_to_proper_yaml.py` - Converts XML-embedded content to structured YAML
+- `add_yaml_doc_markers.py` - Adds YAML 1.2.2 document markers
+- `fix_all_yaml_compliance.py` - Comprehensive YAML compliance remediation
+
+### Running Scripts
+
+```bash
+# Fix YAML formatting
+python scripts/fix_yaml_formatting.py
+
+# Add missing metadata
+python scripts/add_framework_metadata.py
+
+# Generate documentation
+python scripts/generate_framework_docs.py
+```
+
+### Environment Variables
+
+Scripts support the `SCRATCHPAD_DIR` environment variable:
+```bash
+export SCRATCHPAD_DIR=/path/to/repository
+python scripts/fix_yaml_formatting.py
 ```
 
 ## License
 MIT License - Free for commercial and personal use.
+
+See [license.txt](license.txt) for full license text.
+
+## Contributing
+
+We welcome contributions! Here's how you can help:
+
+### Reporting Issues
+- Use GitHub Issues for bug reports
+- Include framework name and error details
+- Provide example YAML content if relevant
+
+### Adding New Frameworks
+1. Create YAML file in appropriate category directory
+2. Follow the standard framework structure
+3. Include complete documentation metadata
+4. Test with `pytest tests/`
+5. Submit a Pull Request
+
+### Code Contributions
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes with tests
+4. Ensure all tests pass
+5. Submit a Pull Request
+
+### Documentation
+- Improvements to README or docs always welcome
+- Keep explanations clear and beginner-friendly
+- Include examples where helpful
 
 ## Project Overview
 - **30 frameworks** persona and framework rework
