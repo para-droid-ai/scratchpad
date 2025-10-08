@@ -18,11 +18,7 @@
     },
     "framework": {
       "type": "object",
-      "anyOf": [
-        { "required": ["content"] },
-        { "required": ["structure"] },
-        { "required": ["legacy_content"] }
-      ],
+      "required": ["content"],
       "properties": {
         "content": { "type": "string" },
         "structure": { "type": "object" },
