@@ -18,10 +18,16 @@
     },
     "framework": {
       "type": "object",
-      "required": ["content"],
       "properties": {
-        "content": { "type": "string" }
-      }
+        "content": { "type": "string" },
+        "structure": { "type": "object" },
+        "legacy_content": { "type": "string" }
+      },
+      "anyOf": [
+        { "required": ["content"] },
+        { "required": ["structure"] },
+        { "required": ["legacy_content"] }
+      ]
     }
   },
   "additionalProperties": true
