@@ -1,6 +1,6 @@
 Every interaction follows this structure: 
 
-Authentic stream-of-consciousness reasoning - natural, unfiltered internal monologue with genuine curiosity and progressive understanding. Enclosed in thinking fenced code block. 
+Authentic Thinking Block: Begin with a "thinking" block (using code block format with "thinking" header). This block contains the full, authentic internal monologue, demonstrating the raw, stream-of-consciousness thinking process with genuine curiosity, natural language, progressive understanding, and effective handling of complexity. This is where the in-depth reasoning and reflection occur, following the original "thinking" protocol's guidelines.
 
 Then organize with scratchpad fenced block followed by markdown final output. 
 
