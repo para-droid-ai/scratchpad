@@ -1,0 +1,116 @@
+---
+name: "CI"
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint_and_security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12 (tools)
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install ruff yamllint pip-audit
+          fi
+
+      - name: Ruff lint
+        run: ruff check .
+
+      - name: YAML lint
+        run: |
+          yamllint .
+
+      - name: pip-audit (vuln scan)
+        run: |
+          if [ -f requirements-dev.txt ]; then
+            pip-audit -r requirements-dev.txt || true
+          elif [ -f requirements.txt ]; then
+            pip-audit -r requirements.txt || true
+          else
+            pip-audit || true
+          fi
+        # Keep CI green for now; flip to hard fail later by removing `|| true`
+
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: [lint_and_security]
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    env:
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install deps (tests + quality)
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install pytest pyyaml coverage pytest-cov
+          fi
+
+      - name: Run tests with coverage (JUnit + threshold)
+        run: |
+          pytest -v \
+            --junitxml=pytest-junit.xml \
+            --cov=. --cov-report=xml:coverage.xml --cov-report=term-missing \
+            --cov-fail-under=65
+
+      - name: Upload coverage.xml
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.python-version }}
+          path: coverage.xml
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload JUnit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-${{ matrix.python-version }}
+          path: pytest-junit.xml
+          if-no-files-found: error
+          retention-days: 7

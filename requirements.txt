@@ -1,0 +1,8 @@
+pytest
+pyyaml
+coverage
+pytest-cov
+ruff
+mypy
+yamllint
+pip-audit
