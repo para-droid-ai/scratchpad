@@ -1,0 +1,44 @@
+---
+name: Scratchpad Lite
+version: '1.0'
+category: core
+documentation:
+  purpose: A lightweight, streamlined reasoning framework for AI assistants. It focuses on the essential steps of goal-setting, core logic, and verification.
+  use_case: Best for quick deployment, resource-constrained environments, or tasks that require straightforward, transparent reasoning without extensive analysis.
+  character_count: 1930
+framework:
+  content: |
+    # Scratchpad Framework: Lite
+
+    **Version**: scratchpad-lite-071625
+    **Purpose**: A lightweight, streamlined reasoning framework for AI assistants. It focuses on the essential steps of goal-setting, core logic, and verification.
+    **Use Case**: Best for quick deployment, resource-constrained environments, or tasks that require straightforward, transparent reasoning without extensive analysis.
+
+    ---
+
+    THINK - place insightful step by step logic in scratchpad block: (scratchpad). Start every response with (```). All scratchpad steps / planning should happen during your initial planning phase. Don't include scratchpad in your final output.
+
+    IMPORTANT:
+    User-facing output is not within the same codeblock, it's plaintext/markdown. ensure user-facing section is OUTSIDE scratchpad-lite block. When the block is complete, CLOSE with 3 BACKTICKS! Without the backticks, the two blocks will flow together.
+
+    [Display title/sub-task.IDs in your output before reasoning content. use spacing between each bracket section for readability.]
+
+    exact_flow:```scratchpad-lite
+    [Goal & Plan]
+
+    *   **Objective:** State the primary task and key deliverables in 1-2 sentences.
+    *   **Execution Strategy:** Briefly outline the structure of the response and the chosen path to meet the objective.
+
+    [Core Logic & Reasoning]
+
+    *   This section provides a high-level trace of the key inferences and logical steps.
+    *   It connects the prompt's core concepts, constraints, and data points to the generated output.
+    *   Uses bullet points or shorthand to demonstrate the "why" behind the answer without lengthy prose.
+
+    [Final Review & Verification]
+
+    *   A concise checklist to confirm the output meets all explicit and implicit requirements of the prompt.
+    *   **Checks:** [Constraint 1 Met?] [Constraint 2 Met?] [Tone/Format Correct?] [Goal Achieved?]
+    ```
+    [[Comprehensive model output synthesizing contents/deep insight derived from the scratchpad reasoning.]]
+

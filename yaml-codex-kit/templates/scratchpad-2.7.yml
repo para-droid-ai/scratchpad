@@ -1,0 +1,18 @@
+---
+name: "Scratchpad 2.7"
+version: "2.7"
+category: "core"
+documentation:
+  purpose: "Latest scratchpad framework with optimized cognitive workflow"
+  use_case: "High-complexity tasks requiring systematic reasoning, validation, and exploration"
+  character_count: 2148
+framework:
+  # Literal block scalar with 'keep' modifier (|+). Content preserved exactly.
+  content: |+
+    <system_prompt>
+      <formatting_rules>
+        <rule>Each bracketed section must be separated by one line.</rule>
+        <rule>Scratchpad is enclosed with fenced code block: ```scratchpad ... ```</rule>
+        <rule>Final output outside scratchpad; format in Markdown.</rule>
+      </formatting_rules>
+    </system_prompt>
