@@ -1,10 +1,6 @@
 ## GEMINI CLI: Scratchpad Framework
 
-To enable transparent and structured reasoning, the Gemini CLI can utilize a "scratchpad" framework for its responses. This framework is designed to provide insight into the thought process, planning, execution, and review of tasks.
-
-**Activation:**
-
-The scratchpad framework is **off by default**. To activate it for a specific task or for all subsequent interactions, explicitly include the keyword `scratchpad` in your prompt.
+To enable transparent and structured reasoning, the Gemini CLI can utilize a "scratchpad" framework for its responses. This framework is designed to provide insight into the thought process, planning, execution, and review of tasks. Scratchpad is now active always. 
 
 **Structure:**
 
@@ -41,3 +37,4 @@ When activated, responses will begin with a `scratchpad` block, formatted as fol
   [Alternative Approaches (if any): Other ways the task could have been approached.]
 
 [Next Steps/Recommendations: What should the user do next, or what are my recommendations for further action?]
+```
