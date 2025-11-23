@@ -1,0 +1,52 @@
+{
+  "server": {
+    "name": "scratchpad-mcp",
+    "version": "1.0.0"
+  },
+  "models": {
+    "primary": "claude",
+    "available": {
+      "claude": {
+        "enabled": true,
+        "model": "claude-sonnet-4-20250514",
+        "apiKeyEnv": "ANTHROPIC_API_KEY"
+      },
+      "openai": {
+        "enabled": true,
+        "model": "gpt-4o",
+        "apiKeyEnv": "OPENAI_API_KEY"
+      },
+      "gemini": {
+        "enabled": true,
+        "model": "gemini-1.5-pro",
+        "apiKeyEnv": "GOOGLE_API_KEY"
+      },
+      "perplexity": {
+        "enabled": true,
+        "model": "llama-3.1-sonar-large-128k-online",
+        "apiKeyEnv": "PERPLEXITY_API_KEY"
+      }
+    }
+  },
+  "personas": {
+    "default": "standard",
+    "available": ["standard", "saganpad", "gilfoylebot", "researcher", "novelist"]
+  },
+  "cognitiveOps": {
+    "defaultOperations": [
+      "attention_focus",
+      "theory_of_mind",
+      "constraint_check",
+      "reasoning_pathway",
+      "metacognition"
+    ]
+  },
+  "research": {
+    "maxSources": 10,
+    "synthesisMinWords": 2000
+  },
+  "creative": {
+    "defaultChapterWords": 8000,
+    "planningRequired": true
+  }
+}
