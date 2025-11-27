@@ -1,4 +1,4 @@
-# Scratchpad - 2025 Update
+# Scratchpad - 2025 Update (outdated)
 
 Scratchpad is a modular reasoning framework designed for sophisticated AI assistants and power users seeking transparent, context-aware intelligence. The framework works as a form of "user/machine calibration" with a focus on user-context and user-intent. The power lies in deconstructing ideas logically from A to B to Z, enabling any AI system to provide deeper, more reliable insights through structured cognitive operations.
 
@@ -37,10 +37,12 @@ Scratchpad facilitates advanced reasoning by systematically processing user inpu
 
 Core, general-purpose scratchpad templates for reasoning, clarity, and calibration across any domain.
 
-- **[2.5-refined-040125.txt](2.5-refined-040125.txt)** - Latest comprehensive framework with advanced cognitive operations
-- **[2.5-medium-071825.txt](2.5-medium-071825.txt)** - Intermediate version with balanced complexity
+ - **[scrathcpad-2.7.txt](pplx-AI-profile-2.7.txt)** - Optimized for Perplexity AI profiles
+- **[scrathcpad-CLI.txt](111.txt)** - Optimized for developer/coding/project focus - for use on CLI interface
+- **[scratchpad-XML.txt](11111.txt)** - Latest comprehensive framework with advanced cognitive operations (version 2.7 in XML formatting)
+- **[scratchpad-2.6-080125.txt](11111.txt)** - August checkpoint, exploring a longer prompt with additional text blocks for direction/directions regarding the use of the additional two sections. 
+- **[2.5-refined-040125.txt](2.5-refined-040125.txt)** - New strict format, two additional sections (Constraint Check & Context Integration, "required" format)
 - **[scratchpad-lite-071625.txt](scratchpad-lite-071625.txt)** - Streamlined version for quick deployment
-- **[scratchpad-think_v4_1208.txt](scratchpad-think_v4_1208.txt)** - Classic thinking-focused template
 - **[pplx-AI-profile-cplx-1-update.txt](pplx-AI-profile-cplx-1-update.txt)** - Optimized for Perplexity AI profiles
 
 ### Purpose-Built
