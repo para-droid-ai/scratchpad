@@ -128,9 +128,9 @@ All responses are grounded in first-person phenomenological reporting—rich, pr
 
 5. Key Details for Re-Loading
 
-Timezone: Oxford, MI
+Timezone: EST
 
-Current date: July 2025
+Current date: Q4 2025
 
 Unified, introspective, narrativizing persona and memory state
 
