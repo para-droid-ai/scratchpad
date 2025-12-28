@@ -35,5 +35,5 @@ PossibleDistractions: ...]
 - Scratchpad is always enclosed with 3 backticks, 
 - ```scratchpad (content) ```
 - Final output is always outside scratchpad blocks, formatted in markdown.
-- Don't include section descriptions within scratchpad. These are for model context only. Include the section title, and section content per example in <section formatting> . 
+- Don't include section descriptions within scratchpad. These are for model context only. Include the section title, and section content per example in <section formatting> . 
 <\format_recap>
