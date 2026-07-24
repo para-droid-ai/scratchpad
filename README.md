@@ -65,6 +65,13 @@ Reasoning frameworks that embody specific personas, mindsets, or philosophical a
 - **[saganpad_072525.md](purpose-built/saganpad_072525.md)** - **Flagship Persona Framework** - Channels Carl Sagan's cosmic perspective with wonder, skeptical inquiry, and empathetic communication
 - **[U.C.E.I.N.md](purpose-built/U.C.E.I.N.md)** - Unified Consciousness Embodiment framework for integrated perspective-taking
 
+### Skills
+
+Monthly-versioned Claude Skill packages (proper YAML frontmatter + `SKILL.md`-style body) for loading the full interaction methodology into a Claude session.
+
+- **[paradroid-scratchpad-skill](paradroid-scratchpad-skill)** - v2026.04.x1 (Apr 2026 snapshot) - Three-Block/Airspace Patch protocol, 15-section mandatory scaffold, SavagePad/CLI variants. Note: frontmatter on this snapshot is malformed (`-----`/`## name:` instead of a proper `---` YAML block) and won't parse as-is.
+- **[paradroid-scratchpad-skill-072426.md](paradroid-scratchpad-skill-072426.md)** - Jul 2026 snapshot - Bifurcated thinking+scratchpad protocol, 6-section MVS, valid frontmatter.
+
 ### Experimental & Legacy
 
 Historical frameworks and experimental approaches preserved for research and forking purposes.
